@@ -1,101 +1,310 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="hi" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aquelio | Packaged Drinking Water</title>
-<style>
-:root{--navy:#06366d;--blue:#0b66b3;--light:#eef8ff;--gold:#d6a84f}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;color:#082f5e;background:#f7fbff}
-nav{position:sticky;top:0;z-index:10;background:#06366d;color:white;display:flex;align-items:center;justify-content:space-between;padding:13px 5%;box-shadow:0 3px 14px #0002}
-.logo{font-family:Georgia,serif;font-size:29px;font-weight:700;letter-spacing:2px}.tag{font-size:10px;letter-spacing:2px}.navlinks{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}.navlinks a{color:#fff;text-decoration:none;font-size:14px}.btn{display:inline-block;background:#0874c9;color:white;padding:13px 22px;border-radius:30px;text-decoration:none;font-weight:700}
-.hero{min-height:620px;background:linear-gradient(90deg,#06366d22,#ffffff11),url("aquelio-homepage-reference.png") center/cover no-repeat;display:flex;align-items:flex-end;padding:55px 6%}
-.heroBox{max-width:560px;background:#ffffffeb;padding:28px;border-radius:20px;box-shadow:0 10px 35px #00366d33}.hero h1{font-family:Georgia,serif;font-size:56px;margin:0;color:#06366d}.hero p{font-size:20px;line-height:1.5}.chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.chip{background:#e7f4ff;border:1px solid #9ac8ed;padding:8px 13px;border-radius:20px}
-section{padding:65px 6%;max-width:1250px;margin:auto}.title{text-align:center;font-family:Georgia,serif;font-size:36px;color:#06366d;margin-bottom:12px}.sub{text-align:center;max-width:800px;margin:0 auto 35px;line-height:1.6}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:white;border:1px solid #cfe5f6;border-radius:18px;padding:18px;text-align:center;box-shadow:0 8px 25px #06366d12}.card img{width:100%;height:210px;object-fit:cover;border-radius:13px}.price{font-size:24px;font-weight:800;color:#06366d}.small{font-size:13px;color:#55708d}
-.story{background:linear-gradient(135deg,#eaf6ff,#fff)}.storyGrid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.storyBox{background:white;padding:30px;border-radius:20px;border-left:5px solid #0b66b3;box-shadow:0 8px 25px #06366d12;line-height:1.8}
-.custom{background:#06366d;color:white;border-radius:25px;padding:45px}.custom .title{color:white}.custom p{text-align:center;line-height:1.7}.customGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:25px}.customItem{background:#ffffff14;border:1px solid #ffffff33;border-radius:15px;padding:20px;text-align:center}
-.order{background:#fff7e5;border-top:1px solid #ead49c;border-bottom:1px solid #ead49c;text-align:center}.order h2{font-family:Georgia,serif;font-size:34px;color:#06366d}.whatsapp{background:#1aa85b}.footer{background:#04254b;color:#fff;text-align:center;padding:35px 6%}.footer a{color:white}.bilingual{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-@media(max-width:850px){.navlinks{display:none}.hero{min-height:520px;padding:25px}.hero h1{font-size:42px}.products,.storyGrid,.bilingual,.customGrid{grid-template-columns:1fr}.heroBox{padding:22px}section{padding:45px 5%}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUELIO™ | Purity from Aravallis, Royalty of Rajasthan</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-royal { font-family: 'Cinzel', serif; }
+        .font-body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .royal-gradient { background: linear-gradient(135deg, #0b192c 0%, #1e3e62 60%, #9a7432 100%); }
+        .gold-border { border: 2px solid #dfb15b; }
+        .gold-text { color: #dfb15b; }
+        .royal-card { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(10px); }
+    </style>
 </head>
-<body>
-<nav>
-  <div><div class="logo">AQUELIO<sup>™</sup></div><div class="tag">PACKAGED DRINKING WATER</div></div>
-  <div class="navlinks"><a href="#home">Home / होम</a><a href="#products">Products / उत्पाद</a><a href="#story">Our Story / हमारी कहानी</a><a href="#why">Why Aquelio / क्यों?</a><a href="#custom">Custom Label / कस्टम लेबल</a><a href="#order">Order Now / ऑर्डर करें</a></div>
-  <a class="btn" href="https://wa.me/919351156730?text=Hello%20Aquelio%2C%20I%20want%20to%20place%20an%20order." target="_blank">WhatsApp</a>
-</nav>
+<body class="bg-amber-50/30 text-slate-800 font-body antialiased">
 
-<header id="home" class="hero">
- <div class="heroBox">
-   <h1>AQUELIO</h1>
-   <div class="tag" style="color:#06366d;font-size:13px">PACKAGED DRINKING WATER</div>
-   <p><b>Pure Water... Better Life...</b><br>शुद्ध पानी... बेहतर जीवन...</p>
-   <div class="chips"><span class="chip">200 ml • 24 Bottles</span><span class="chip">500 ml • 24 Bottles</span><span class="chip">1 Litre • 12 Bottles</span></div>
-   <a class="btn whatsapp" href="https://wa.me/919351156730?text=Hello%20Aquelio%2C%20I%20want%20to%20order%20water." target="_blank">Order on WhatsApp / WhatsApp पर ऑर्डर करें</a>
- </div>
-</header>
+    <!-- Top Announcement Bar -->
+    <div class="bg-slate-900 text-amber-200 text-xs py-2 px-4 border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center gap-2">
+            <span><i class="fa-solid fa-crown text-amber-400 mr-2"></i> अरावली की पहाड़ियों की शुद्धता... राजस्थान की शाही पसंद!</span>
+            <span>📞 कॉल / व्हाट्सएप ऑर्डर: <strong class="text-white">+91 9351156730</strong></span>
+        </div>
+    </div>
 
-<section id="products">
- <h2 class="title">Our Products | हमारे उत्पाद</h2>
- <p class="sub">Aquelio की branding और Rajasthan-inspired premium presentation के साथ carton-wise ordering के लिए तैयार विकल्प।</p>
- <div class="products">
-  <div class="card"><img src="aquelio-homepage-reference.png" alt="Aquelio 200 ml carton"><h3>200 ml</h3><div class="small">24 Bottles / Carton</div><div class="price">₹120 / Carton</div><a class="btn" href="#order">Add to Order</a></div>
-  <div class="card"><img src="aquelio-homepage-reference.png" alt="Aquelio 500 ml carton"><h3>500 ml</h3><div class="small">24 Bottles / Carton</div><div class="price">₹240 / Carton</div><a class="btn" href="#order">Add to Order</a></div>
-  <div class="card"><img src="aquelio-homepage-reference.png" alt="Aquelio 1 litre carton"><h3>1 Litre</h3><div class="small">12 Bottles / Carton</div><div class="price">₹240 / Carton</div><a class="btn" href="#order">Add to Order</a></div>
- </div>
-</section>
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-950/95 text-white backdrop-blur-md border-b border-amber-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-amber-500 to-sky-600 rounded-xl flex items-center justify-center text-white text-xl shadow-lg">
+                    <i class="fa-solid fa-mountain font-bold"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-royal font-bold tracking-widest text-white">AQUELIO<span class="text-amber-400">™</span></span>
+                    <span class="text-[9px] text-amber-300 uppercase tracking-widest block font-bold">Packaged Drinking Water</span>
+                </div>
+            </a>
 
-<section id="story" class="story">
- <h2 class="title">Our Story | हमारी कहानी</h2>
- <div class="storyGrid">
-  <div class="storyBox">
-   <h3>English — The Aquelio Story</h3>
-   <p>Aquelio began with a simple thought: when a bottle reaches someone’s hand, it should carry more than water—it should carry trust. Inspired by the warmth, heritage and hospitality of Rajasthan, Aquelio brings together a clean modern identity with a proudly local spirit.</p>
-   <p>Our aim is to make every bottle feel dependable, presentable and memorable—from everyday refreshment to hotels, offices, celebrations and special events. With thoughtful packaging and a growing custom-label service, we want every customer to feel that their water is made for their moment.</p>
-   <p><b>Aquelio is not just a bottle on the table; it is a small symbol of care, hospitality and a better experience.</b></p>
-  </div>
-  <div class="storyBox">
-   <h3>हिंदी — Aquelio की कहानी</h3>
-   <p>Aquelio की शुरुआत एक छोटी-सी सोच से हुई—जब पानी की बोतल किसी के हाथ तक पहुँचे, तो उसमें सिर्फ पानी नहीं बल्कि भरोसा भी महसूस होना चाहिए। राजस्थान की गर्मजोशी, विरासत और मेहमाननवाज़ी से प्रेरित होकर Aquelio ने एक ऐसी पहचान बनाई जो आधुनिक भी है और अपनी मिट्टी से जुड़ी हुई भी।</p>
-   <p>हमारा उद्देश्य है कि हर बोतल रोज़मर्रा की प्यास से लेकर होटल, ऑफिस, शादी, पार्टी और खास मौकों तक एक साफ-सुथरा और यादगार अनुभव दे। Custom Label सुविधा के साथ हम चाहते हैं कि हर ग्राहक की बोतल उसके खास पल की अपनी पहचान बने।</p>
-   <p><b>Aquelio सिर्फ मेज़ पर रखी बोतल नहीं—यह अपनापन, देखभाल और बेहतर अनुभव की एक छोटी-सी पहचान है।</b></p>
-  </div>
- </div>
-</section>
+            <nav class="hidden md:flex items-center space-x-8 font-semibold text-sm">
+                <a href="#home" class="hover:text-amber-400 transition">होम (Home)</a>
+                <a href="#story" class="hover:text-amber-400 transition">हमारी प्रेरणा (Our Story)</a>
+                <a href="#products" class="hover:text-amber-400 transition">उत्पाद (Products)</a>
+                <a href="#customize" class="hover:text-amber-400 transition">Customize लेबल</a>
+                <a href="#contact" class="hover:text-amber-400 transition">संपर्क (Contact)</a>
+            </nav>
 
-<section id="why">
- <h2 class="title">Why Choose Aquelio? | Aquelio क्यों?</h2>
- <div class="bilingual">
-  <div class="storyBox"><h3>For Customers</h3><p>Premium Rajasthan-inspired presentation, clear product information, carton-wise ordering and direct WhatsApp support.</p></div>
-  <div class="storyBox"><h3>ग्राहकों के लिए</h3><p>प्रीमियम Rajasthan theme, साफ product details, carton के हिसाब से आसान ऑर्डर और direct WhatsApp सहायता।</p></div>
- </div>
-</section>
+            <a href="https://wa.me/919351156730" target="_blank" 
+               class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-bold px-5 py-2.5 rounded-full text-xs sm:text-sm shadow-lg flex items-center space-x-2 transition transform hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>ऑर्डर करें</span>
+            </a>
+        </div>
+    </header>
 
-<section id="custom">
- <div class="custom">
-  <h2 class="title">Custom Water Label | कस्टम वॉटर लेबल</h2>
-  <p>अपने brand, event या special occasion को Aquelio bottle पर अपनी पहचान दें।</p>
-  <div class="customGrid">
-   <div class="customItem">🏢<br><b>Business Branding</b><br>बिज़नेस ब्रांडिंग</div>
-   <div class="customItem">💍<br><b>Wedding</b><br>शादी / विवाह</div>
-   <div class="customItem">🎂<br><b>Birthday</b><br>जन्मदिन</div>
-   <div class="customItem">🎁<br><b>Corporate Gifts</b><br>कॉर्पोरेट गिफ्ट</div>
-  </div>
- </div>
-</section>
+    <!-- PAGE 1: HERO SECTION (Aravalli & Royalty Theme) -->
+    <section id="home" class="relative royal-gradient text-white py-24 px-4 overflow-hidden border-b-4 border-amber-500/50">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                    <span>⛰️ Pure Water from Aravalli Hills</span>
+                </div>
 
-<section id="order" class="order">
- <h2>Order Now | अभी ऑर्डर करें</h2>
- <p>Product चुनें → Carton quantity बताएं → WhatsApp पर order details भेजें।</p>
- <a class="btn whatsapp" href="https://wa.me/919351156730?text=Hello%20Aquelio%2C%20please%20share%20today's%20carton%20order%20details." target="_blank">+91 9351156730 • WhatsApp Order</a>
- <p class="small">Online payment gateway को live करने के लिए merchant/payment integration की आवश्यकता होगी।</p>
-</section>
+                <h1 class="text-4xl sm:text-6xl font-royal font-extrabold tracking-wide leading-tight">
+                    Purity from the Aravallis, <br>
+                    <span class="gold-text">Royalty of Rajasthan</span>
+                </h1>
 
-<footer class="footer">
- <div class="logo">AQUELIO<sup>™</sup></div><div class="tag">PACKAGED DRINKING WATER</div>
- <p>Pure Water... Better Life... | शुद्ध पानी... बेहतर जीवन...</p>
- <p>© 2026 Aquelio™. All Rights Reserved. • Rajasthan Inspired Brand Experience</p>
-</footer>
+                <p class="text-slate-200 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    राजस्थान की वीर धरा और अरावली पर्वतमाला की गहराइयों की शुद्धता का अहसास। AQUELIO आपके परिवार के स्वास्थ्य के लिए लाया है 100% शुद्ध, मिनरल-रिच और 8-स्टेज प्यूरीफाइड ड्रिंकिंग वाटर।
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#products" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-8 py-3.5 rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
+                        उत्पाद देखें (View Products)
+                    </a>
+                    <a href="#story" class="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3.5 rounded-xl border border-amber-400/40 backdrop-blur-md transition">
+                        हमारी कहानी पढ़ें
+                    </a>
+                </div>
+
+                <!-- Quality Badges -->
+                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/10">
+                    <div class="text-center p-3 rounded-xl bg-white/5 border border-white/10">
+                        <i class="fa-solid fa-award text-amber-400 text-2xl mb-1"></i>
+                        <p class="text-xs font-bold">ISO Certified</p>
+                    </div>
+                    <div class="text-center p-3 rounded-xl bg-white/5 border border-white/10">
+                        <i class="fa-solid fa-filter text-amber-400 text-2xl mb-1"></i>
+                        <p class="text-xs font-bold">8-Stage Purified</p>
+                    </div>
+                    <div class="text-center p-3 rounded-xl bg-white/5 border border-white/10">
+                        <i class="fa-solid fa-gem text-amber-400 text-2xl mb-1"></i>
+                        <p class="text-xs font-bold">Natural Minerals</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5">
+                <div class="royal-card p-8 rounded-3xl gold-border shadow-2xl text-center space-y-6">
+                    <div class="w-20 h-20 mx-auto bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center text-4xl border border-amber-400/40">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h3 class="text-2xl font-royal font-bold text-white">AQUELIO Pure Hydration</h3>
+                    <p class="text-slate-300 text-sm">राजस्थान के हर आयोजन, शादी और घर के लिए उत्तम पेयजल।</p>
+                    <div class="bg-slate-900/80 p-4 rounded-xl text-left space-y-2 border border-amber-500/20 text-xs text-amber-200">
+                        <p>✓ 100% बीपीए-फ्री (BPA Free) हाइजीनिक बोतलें</p>
+                        <p>✓ प्राकृतिक स्वाद और संतुलित pH लेवल</p>
+                        <p>✓ राजस्थान में त्वरित होम डिलीवरी</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PAGE 2: OUR INSPIRATIONAL STORY (Hindi & English) -->
+    <section id="story" class="py-20 bg-amber-50/50 px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-amber-700 font-extrabold text-xs uppercase tracking-widest bg-amber-100 px-4 py-1 rounded-full border border-amber-300">Our Inspiration</span>
+                <h2 class="text-3xl sm:text-5xl font-royal font-extrabold text-slate-900 mt-3">हमारी प्रेरणा: शुद्धता और विरासत का एक सफर</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Hindi Story -->
+                <div class="bg-white p-8 rounded-3xl border border-amber-200 shadow-md relative">
+                    <div class="text-amber-600 font-bold text-lg mb-4 flex items-center">
+                        <i class="fa-solid fa-feather-pointed mr-2"></i> हिंदी संस्करण
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">अरावली की पावन धरा और राजस्थान का संकल्प</h3>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                        राजस्थान की वीर और ऐतिहासिक भूमि, जहाँ हर कण में स्वाभिमान और अतिथि सत्कार की परंपरा बसती है। इसी पावन धरा की गोद में फैली प्राचीनतम <strong>अरावली पर्वतमालाएं (Aravalli Range)</strong> सदियों से प्राकृतिक जल स्रोतों का संरक्षण करती आई हैं। राजस्थान के कठिन मरुस्थलीय मौसम में पानी सिर्फ एक ज़रूरत नहीं, बल्कि जीवन और सम्मान का प्रतीक है।
+                    </p>
+                    <p class="text-slate-700 text-sm leading-relaxed">
+                        <strong>AQUELIO</strong> की शुरुआत इसी सोच के साथ हुई कि राजस्थान की अरावली की गहराइयों से प्रेरणा लेकर हर घर और हर परिवार तक 100% शुद्ध और खनिज-युक्त पानी पहुँचाया जाए। हम 8-स्तरीय आधुनिक प्यूरीफिकेशन प्रक्रिया के ज़रिए पानी के प्राकृतिक स्वाद और सेहतमंद मिनरल्स को सुरक्षित रखते हैं। AQUELIO का हर घूंट आपको अरावली की ताजगी और राजस्थान की शाही मेहमाननवाज़ी का एहसास कराता है।
+                    </p>
+                </div>
+
+                <!-- English Story -->
+                <div class="bg-white p-8 rounded-3xl border border-amber-200 shadow-md relative">
+                    <div class="text-amber-600 font-bold text-lg mb-4 flex items-center">
+                        <i class="fa-solid fa-globe mr-2"></i> English Version
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">The Legend of Aravalli & Rajasthani Purity</h3>
+                    <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                        Rajasthan is a land defined by royal heritage, timeless culture, and rich traditions. Amidst this majestic landscape stands the ancient <strong>Aravalli Range</strong>, one of the world's oldest mountain systems, preserving natural springs for generations. In the heart of Rajasthan, water is revered not just as a resource, but as a symbol of life, hospitality, and pure care.
+                    </p>
+                    <p class="text-slate-700 text-sm leading-relaxed">
+                        <strong>AQUELIO</strong> was born out of a passion to bring pristine, mineral-rich mountain water to every household. Combining modern 8-Stage Ultra-Purification technology with essential minerals (Calcium & Magnesium), AQUELIO ensures that every bottle is safe, refreshing, and untouched by impurities. Experience the true essence of purity, nature, and royal hospitality with every drop of AQUELIO.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: PRODUCTS SECTION (200ml, 500ml, 750ml, 1 Litre) -->
+    <section id="products" class="py-20 bg-white px-4 border-t border-b border-amber-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-sky-600 font-extrabold text-xs uppercase tracking-widest bg-sky-50 px-3 py-1 rounded-md border border-sky-100">Our Premium Range</span>
+                <h2 class="text-3xl sm:text-4xl font-royal font-extrabold text-slate-900 mt-2">हमारे उत्पाद (Our Products)</h2>
+                <p class="text-slate-500 mt-2">आपकी हर आवश्यकता के लिए 4 सही साइज़ में उपलब्ध</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Product 1: 200 ml -->
+                <div class="bg-amber-50/40 rounded-3xl p-6 border border-amber-200 hover:border-amber-400 transition-all shadow-sm hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="h-40 bg-white rounded-2xl flex items-center justify-center text-5xl text-sky-600 mb-4 shadow-inner">
+                            <i class="fa-solid fa-bottle-water"></i>
+                        </div>
+                        <span class="text-[10px] font-extrabold text-amber-800 bg-amber-200 px-2.5 py-1 rounded-full uppercase">शादी & इवेंट विशेष</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-3">200 ml Bottle</h3>
+                        <p class="text-slate-600 text-xs mt-2">पार्टी, शादी और सम्मेलनों में मेहमानों को सर्व करने के लिए सबसे उपयुक्त मिनी साइज।</p>
+                    </div>
+                    <a href="https://wa.me/919351156730?text=I%20want%20to%20order%20200ml%20Bottles" target="_blank"
+                       class="mt-6 w-full bg-slate-900 hover:bg-amber-600 text-white font-bold py-3 rounded-xl text-center text-xs transition">
+                        अभी ऑर्डर करें (Order Now)
+                    </a>
+                </div>
+
+                <!-- Product 2: 500 ml -->
+                <div class="bg-amber-50/40 rounded-3xl p-6 border border-amber-200 hover:border-amber-400 transition-all shadow-sm hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="h-40 bg-white rounded-2xl flex items-center justify-center text-5xl text-sky-600 mb-4 shadow-inner">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+                        <span class="text-[10px] font-extrabold text-emerald-800 bg-emerald-200 px-2.5 py-1 rounded-full uppercase">ट्रैवल & पर्सनल</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-3">500 ml Bottle</h3>
+                        <p class="text-slate-600 text-xs mt-2">यात्रा, ऑफिस और पर्सनल यूज़ के लिए सबसे आसान और पसंदीदा साइज।</p>
+                    </div>
+                    <a href="https://wa.me/919351156730?text=I%20want%20to%20order%20500ml%20Bottles" target="_blank"
+                       class="mt-6 w-full bg-slate-900 hover:bg-amber-600 text-white font-bold py-3 rounded-xl text-center text-xs transition">
+                        अभी ऑर्डर करें (Order Now)
+                    </a>
+                </div>
+
+                <!-- Product 3: 750 ml -->
+                <div class="bg-amber-50/40 rounded-3xl p-6 border border-amber-200 hover:border-amber-400 transition-all shadow-sm hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="h-40 bg-white rounded-2xl flex items-center justify-center text-5xl text-sky-600 mb-4 shadow-inner">
+                            <i class="fa-solid fa-glass-water font-bold"></i>
+                        </div>
+                        <span class="text-[10px] font-extrabold text-purple-800 bg-purple-200 px-2.5 py-1 rounded-full uppercase">रॉयल डाइनिंग</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-3">750 ml Bottle</h3>
+                        <p class="text-slate-600 text-xs mt-2">होटल, रेस्टोरेंट और स्पेशल इवेंट्स के टेबल सर्विंग के लिए परफेक्ट प्रीमियम बोतल।</p>
+                    </div>
+                    <a href="https://wa.me/919351156730?text=I%20want%20to%20order%20750ml%20Bottles" target="_blank"
+                       class="mt-6 w-full bg-slate-900 hover:bg-amber-600 text-white font-bold py-3 rounded-xl text-center text-xs transition">
+                        अभी ऑर्डर करें (Order Now)
+                    </a>
+                </div>
+
+                <!-- Product 4: 1 Litre -->
+                <div class="bg-amber-50/40 rounded-3xl p-6 border border-amber-200 hover:border-amber-400 transition-all shadow-sm hover:shadow-xl flex flex-col justify-between group">
+                    <div>
+                        <div class="h-40 bg-white rounded-2xl flex items-center justify-center text-5xl text-sky-600 mb-4 shadow-inner">
+                            <i class="fa-solid fa-wine-bottle"></i>
+                        </div>
+                        <span class="text-[10px] font-extrabold text-sky-800 bg-sky-200 px-2.5 py-1 rounded-full uppercase">फैमिली पैक</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-3">1 Litre Bottle</h3>
+                        <p class="text-slate-600 text-xs mt-2">घर के दैनिक उपयोग और पारिवारिक सफ़र के लिए 100% शुद्ध मिनरल वाटर।</p>
+                    </div>
+                    <a href="https://wa.me/919351156730?text=I%20want%20to%20order%201Litre%20Bottles" target="_blank"
+                       class="mt-6 w-full bg-slate-900 hover:bg-amber-600 text-white font-bold py-3 rounded-xl text-center text-xs transition">
+                        अभी ऑर्डर करें (Order Now)
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 4: CUSTOMIZE WATER LABEL & CONTACT -->
+    <section id="customize" class="py-20 royal-gradient text-white px-4 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="space-y-6">
+                <span class="bg-amber-400 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-widest">
+                    Branding & Events
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-royal font-extrabold">
+                    Customize Water Label <br>
+                    <span class="gold-text">अपना खुद का लेबल बनवायें</span>
+                </h2>
+                <p class="text-slate-200 text-sm sm:text-base">
+                    अपनी शादी (Weddings), जन्मदिन, रिसॉर्ट, होटल या कंपनी के नाम और लोगो (Logo) के साथ पानी की बोतलों पर custom डिज़ाइन लेबल प्रिंट करवाएं।
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 text-xs font-semibold">
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10"><i class="fa-solid fa-heart text-amber-400 mr-2"></i> शादी समारोह (Weddings)</div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10"><i class="fa-solid fa-briefcase text-amber-400 mr-2"></i> कॉर्पोरेट ब्रांडिंग</div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10"><i class="fa-solid fa-hotel text-amber-400 mr-2"></i> होटल एवं रिसॉर्ट्स</div>
+                    <div class="bg-white/10 p-3 rounded-xl border border-white/10"><i class="fa-solid fa-cake-candles text-amber-400 mr-2"></i> बर्थडे & पार्टीज</div>
+                </div>
+
+                <a href="https://wa.me/919351156730?text=Hi,%20I%20want%20to%20Customize%20Water%20Label" target="_blank"
+                   class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-8 py-4 rounded-xl shadow-xl transition transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-pen-ruler mr-2"></i> Customize लेबल का ऑर्डर दें
+                </a>
+            </div>
+
+            <!-- Contact Section Container -->
+            <div id="contact" class="bg-slate-950/90 p-8 rounded-3xl gold-border space-y-6">
+                <h3 class="text-2xl font-royal font-bold text-amber-400 text-center">संपर्क करें (Contact Us)</h3>
+                
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-phone text-amber-400 text-xl"></i>
+                        <div>
+                            <p class="text-xs text-slate-400">फोन नंबर / कॉल:</p>
+                            <p class="font-bold text-white">+91 9351156730</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                        <div>
+                            <p class="text-xs text-slate-400">व्हाट्सएप ऑर्डर support:</p>
+                            <p class="font-bold text-white">+91 9351156730</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 bg-white/5 p-4 rounded-xl border border-white/10">
+                        <i class="fa-solid fa-location-dot text-amber-400 text-xl"></i>
+                        <div>
+                            <p class="text-xs text-slate-400">प्लांट एवं डिस्ट्रीब्यूशन सेंटर:</p>
+                            <p class="font-bold text-white">AQUELIO Packaged Water, Rajasthan, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 text-center py-6 text-xs border-t border-amber-500/20">
+        © 2026 AQUELIO™ Packaged Drinking Water. All Rights Reserved. | अरावली की शुद्धता... राजस्थान का गौरव।
+    </footer>
+
 </body>
 </html>
