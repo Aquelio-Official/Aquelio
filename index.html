@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquelio - Packaged Drinking Water</title>
+    <!-- Icons ke liye FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background-color: #f4f8fb; color: #333; line-height: 1.6; }
+
+        /* Top Bar */
+        .top-bar { background: #002b5b; color: #fff; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 14px; flex-wrap: wrap; gap: 10px; }
+        .top-bar-info { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+        .top-bar-info i { color: #00d2ff; margin-right: 5px; }
+        .social-links a { color: #fff; margin-left: 12px; text-decoration: none; font-size: 16px; }
+
+        /* Navigation */
+        header { background: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 5%; }
+        .logo h1 { color: #0056b3; font-size: 26px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .logo span { color: #00a2e8; font-size: 12px; display: block; font-weight: 600; }
+        .nav-menu { display: flex; list-style: none; gap: 20px; align-items: center; }
+        .nav-menu a { text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; }
+        .nav-menu a:hover { color: #0056b3; }
+        .btn-order { background: #0056b3; color: white; padding: 10px 22px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-order:hover { background: #003d80; }
+
+        /* Hero Banner */
+        .hero { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 60px 5%; text-align: center; border-bottom: 4px solid #0056b3; position: relative; }
+        .hero-tagline { color: #0056b3; font-size: 18px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }
+        .hero-title { font-size: 42px; color: #002b5b; margin-bottom: 10px; font-weight: 800; }
+        .hero-sub { font-size: 22px; color: #0077b6; margin-bottom: 25px; font-weight: 600; }
+        .offer-badge { background: #ff4757; color: white; display: inline-block; padding: 12px 30px; border-radius: 30px; font-size: 18px; font-weight: bold; box-shadow: 0 4px 12px rgba(255,71,87,0.3); }
+
+        /* Features Section */
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 40px 5%; background: #ffffff; }
+        .feature-card { text-align: center; padding: 25px 15px; border-radius: 10px; background: #f8faff; border: 1px solid #e1effe; }
+        .feature-icon { width: 60px; height: 60px; background: #0056b3; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px; }
+        .feature-card h3 { color: #002b5b; margin-bottom: 8px; font-size: 18px; }
+        .feature-card p { font-size: 14px; color: #666; }
+
+        /* Products Section */
+        .products-section { padding: 50px 5%; text-align: center; }
+        .section-title { font-size: 30px; color: #002b5b; margin-bottom: 30px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; width: 60%; height: 3px; background: #00a2e8; position: absolute; bottom: -8px; left: 20%; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 20px; }
+        .product-card { background: white; border-radius: 12px; padding: 25px 20px; border: 1px solid #e0e0e0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .product-img-box { height: 160px; background: #eef7ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; color: #0056b3; font-size: 55px; }
+        .product-card h3 { color: #002b5b; font-size: 20px; margin-bottom: 10px; }
+        .product-card ul { list-style: none; text-align: left; margin-bottom: 20px; font-size: 14px; color: #555; }
+        .product-card ul li { margin-bottom: 6px; }
+        .product-card ul li::before { content: "✓ "; color: #00a2e8; font-weight: bold; }
+        .btn-badge { background: #002b5b; color: white; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: bold; display: inline-block; }
+
+        /* Banner Section */
+        .trust-banner { background: linear-gradient(rgba(0, 43, 91, 0.85), rgba(0, 43, 91, 0.85)), url('https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 60px 5%; margin: 30px 0; }
+        .trust-banner h2 { font-size: 32px; margin-bottom: 10px; }
+        .trust-banner p { font-size: 18px; color: #81d4fa; }
+
+        /* Highlights Grid */
+        .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px 5% 40px; background: white; text-align: center; }
+        .hl-item { padding: 15px; background: #f0f7ff; border-radius: 8px; font-weight: bold; color: #002b5b; border: 1px solid #d0e5ff; }
+        .hl-item i { color: #00a2e8; margin-right: 8px; }
+
+        /* Footer */
+        footer { background: #001f3f; color: white; padding: 40px 5% 20px; }
+        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
+        .footer-col { flex: 1; min-width: 250px; }
+        .footer-col h3 { color: #00a2e8; margin-bottom: 15px; font-size: 20px; }
+        .footer-col p, .footer-col li { color: #ccc; font-size: 14px; margin-bottom: 8px; list-style: none; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 13px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span><i class="fa-solid fa-location-dot"></i> City Jobner Dist Jaipur, Rajasthan</span>
+            <span><i class="fa-solid fa-phone"></i> +91 9351156730, 8306094775, 9785680971</span>
+            <span><i class="fa-solid fa-shield-heart"></i> Pure Water, Pure Trust.</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Aquelio™</h1>
+                <span>Packaged Drinking Water</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Why Aquelio</a></li>
+                <li><a href="#">Custom Label</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <a href="tel:9351156730" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <p class="hero-tagline">Pure Water, Pure Trust.</p>
+        <h1 class="hero-title">Aquelio™ Packaged Drinking Water</h1>
+        <p class="hero-sub">हर बूंद में शुद्धता, हर घूंट में ताजगी</p>
+        <div class="offer-badge">
+            होटल, ढाबा, रेस्टोरेंट और कैटरिंग पार्टनर्स के लिए विशेष ऑफर!
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-droplet"></i></div>
+            <h3>100% शुद्ध व सुरक्षित</h3>
+            <p>RO + UV + Ozonation मल्टी-स्टेज प्रिफिल्ट्रेशन प्रोसेस</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-bottle-water"></i></div>
+            <h3>मजबूत व आकर्षक बोतल</h3>
+            <p>प्रिमियम ग्रिप बोतल, लीक-प्रूफ सील और आकर्षक लेबल</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>ज्यादा मुनाफा</h3>
+            <p>अधिक लाभ के लिए व्यापारियों के लिए सही विकल्प</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>संपूर्ण भरोसा</h3>
+            <p>स्वच्छ पानी बेहतर स्वास्थ्य की गारंटी</p>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products-section">
+        <h2 class="section-title">हमारे मुख्य उत्पाद (Our Products)</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img-box"><i class="fa-solid fa-bottle-water"></i></div>
+                <h3>Aquelio 500 ml</h3>
+                <ul>
+                    <li>24 बोतल बंडल</li>
+                    <li>ढाबों, जिम, रेस्टोरेंट की पहली पसंद!</li>
+                </ul>
+                <span class="btn-badge">500 ml Pack</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-box"><i class="fa-solid fa-bottle-water"></i></div>
+                <h3>Aquelio 1 Litre</h3>
+                <ul>
+                    <li>12 बोतल बंडल</li>
+                    <li>हाई-क्वालिटी, किराना दुकानों के लिए बेस्ट।</li>
+                </ul>
+                <span class="btn-badge">1 Litre Pack</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-box"><i class="fa-solid fa-wine-bottle"></i></div>
+                <h3>Aquelio 200 ml</h3>
+                <ul>
+                    <li>स्पेशल ऑर्डर</li>
+                    <li>शादियों, पार्टियों और इवेंट्स के लिए।</li>
+                </ul>
+                <span class="btn-badge">200 ml Pack</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-box"><i class="fa-solid fa-tags"></i></div>
+                <h3>Customize Label</h3>
+                <ul>
+                    <li>Wedding & Corporate Events</li>
+                    <li>Hotels & Restaurants</li>
+                    <li>Parties & Special Events</li>
+                </ul>
+                <span class="btn-badge">Custom Booking</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Trust Banner -->
+    <section class="trust-banner">
+        <h2>राजस्थान की धरती का भरोसा, Aquelio का वादा</h2>
+        <p>शुद्ध पानी, स्वस्थ जीवन, खुशहाल राजस्थान</p>
+    </section>
+
+    <!-- Certifications / Highlights -->
+    <section class="highlights">
+        <div class="hl-item"><i class="fa-solid fa-hand-sparkles"></i> Hygienic Processing</div>
+        <div class="hl-item"><i class="fa-solid fa-heart-pulse"></i> Safe & Healthy</div>
+        <div class="hl-item"><i class="fa-solid fa-users"></i> Trusted by Thousands</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>MA Enterprises</h3>
+                <p>GSTIN: 08CRZPM7630J1ZW</p>
+                <p><i class="fa-solid fa-location-dot"></i> City Jobner Dist Jaipur, State Rajasthan PIN 303328</p>
+                <p><i class="fa-solid fa-phone"></i> Mob: 9351156730, 8306094775, 9785680971</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#" style="color:#ccc; text-decoration:none;">Home</a></li>
+                    <li><a href="#" style="color:#ccc; text-decoration:none;">About Us</a></li>
+                    <li><a href="#" style="color:#ccc; text-decoration:none;">Products</a></li>
+                    <li><a href="#" style="color:#ccc; text-decoration:none;">Custom Label</a></li>
+                    <li><a href="#" style="color:#ccc; text-decoration:none;">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aquelio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
