@@ -3,85 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquelio - Packaged Drinking Water</title>
-    <!-- Icons ke liye FontAwesome CSS -->
+    <title>Aquelio™ | Hydration for the Hustle - Packaged Drinking Water</title>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #0056b3;
+            --primary-dark: #002b5b;
+            --accent: #00a2e8;
+            --whatsapp: #25d366;
+            --bg-light: #f4f8fb;
+            --card-bg: #ffffff;
+            --text-dark: #2d3436;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #f4f8fb; color: #333; line-height: 1.6; }
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
 
-        /* Top Bar */
-        .top-bar { background: #002b5b; color: #fff; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 14px; flex-wrap: wrap; gap: 10px; }
-        .top-bar-info { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-        .top-bar-info i { color: #00d2ff; margin-right: 5px; }
-        .social-links a { color: #fff; margin-left: 12px; text-decoration: none; font-size: 16px; }
+        /* Top Legal Bar */
+        .top-bar { background: var(--primary-dark); color: #fff; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 10px; }
+        .top-bar-info { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        .top-bar-info i { color: var(--accent); margin-right: 4px; }
+        .social-links a { color: #fff; margin-left: 10px; text-decoration: none; font-size: 15px; }
 
-        /* Navigation */
-        header { background: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        /* Navbar */
+        header { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
         .navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 5%; }
-        .logo h1 { color: #0056b3; font-size: 26px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
-        .logo span { color: #00a2e8; font-size: 12px; display: block; font-weight: 600; }
-        .nav-menu { display: flex; list-style: none; gap: 20px; align-items: center; }
-        .nav-menu a { text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; }
-        .nav-menu a:hover { color: #0056b3; }
-        .btn-order { background: #0056b3; color: white; padding: 10px 22px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .btn-order:hover { background: #003d80; }
+        .logo h1 { color: var(--primary); font-size: 26px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .logo span { color: var(--accent); font-size: 11px; display: block; font-weight: 700; letter-spacing: 0.5px; }
+        .nav-menu { display: flex; list-style: none; gap: 18px; align-items: center; }
+        .nav-menu a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; transition: 0.3s; }
+        .nav-menu a:hover { color: var(--primary); }
+        .btn-order-nav { background: var(--whatsapp); color: white; padding: 8px 18px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
 
-        /* Hero Banner */
-        .hero { background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 60px 5%; text-align: center; border-bottom: 4px solid #0056b3; position: relative; }
-        .hero-tagline { color: #0056b3; font-size: 18px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase; }
-        .hero-title { font-size: 42px; color: #002b5b; margin-bottom: 10px; font-weight: 800; }
-        .hero-sub { font-size: 22px; color: #0077b6; margin-bottom: 25px; font-weight: 600; }
-        .offer-badge { background: #ff4757; color: white; display: inline-block; padding: 12px 30px; border-radius: 30px; font-size: 18px; font-weight: bold; box-shadow: 0 4px 12px rgba(255,71,87,0.3); }
+        /* Hero / Gen Z Storyline Section */
+        .hero { background: linear-gradient(135deg, #002b5b 0%, #0056b3 100%); color: white; padding: 70px 5% 80px; text-align: center; position: relative; overflow: hidden; }
+        .hero-badge { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); color: #81d4fa; display: inline-block; padding: 6px 18px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+        .hero h1 { font-size: 42px; font-weight: 900; margin-bottom: 15px; line-height: 1.2; }
+        .hero h1 span { color: #00d2ff; }
+        .hero p { font-size: 18px; max-width: 750px; margin: 0 auto 30px; color: #e1f5fe; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn-main { background: var(--accent); color: white; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-main:hover { background: #0086c0; }
+        .btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.4); padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; backdrop-filter: blur(5px); }
 
-        /* Features Section */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 40px 5%; background: #ffffff; }
-        .feature-card { text-align: center; padding: 25px 15px; border-radius: 10px; background: #f8faff; border: 1px solid #e1effe; }
-        .feature-icon { width: 60px; height: 60px; background: #0056b3; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px; }
-        .feature-card h3 { color: #002b5b; margin-bottom: 8px; font-size: 18px; }
-        .feature-card p { font-size: 14px; color: #666; }
+        /* Storyline Cards */
+        .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 5%; margin-top: -40px; position: relative; z-index: 10; }
+        .story-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-align: center; border-bottom: 4px solid var(--accent); }
+        .story-card i { font-size: 32px; color: var(--primary); margin-bottom: 12px; }
+        .story-card h3 { font-size: 18px; color: var(--primary-dark); margin-bottom: 8px; }
+        .story-card p { font-size: 13px; color: #666; }
 
-        /* Products Section */
-        .products-section { padding: 50px 5%; text-align: center; }
-        .section-title { font-size: 30px; color: #002b5b; margin-bottom: 30px; position: relative; display: inline-block; }
-        .section-title::after { content: ''; width: 60%; height: 3px; background: #00a2e8; position: absolute; bottom: -8px; left: 20%; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 20px; }
-        .product-card { background: white; border-radius: 12px; padding: 25px 20px; border: 1px solid #e0e0e0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        .product-img-box { height: 160px; background: #eef7ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; color: #0056b3; font-size: 55px; }
-        .product-card h3 { color: #002b5b; font-size: 20px; margin-bottom: 10px; }
-        .product-card ul { list-style: none; text-align: left; margin-bottom: 20px; font-size: 14px; color: #555; }
-        .product-card ul li { margin-bottom: 6px; }
-        .product-card ul li::before { content: "✓ "; color: #00a2e8; font-weight: bold; }
-        .btn-badge { background: #002b5b; color: white; padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: bold; display: inline-block; }
+        /* 5-Step Purification Timeline */
+        .section-padding { padding: 60px 5%; text-align: center; }
+        .section-title { font-size: 28px; color: var(--primary-dark); margin-bottom: 10px; font-weight: 800; }
+        .section-sub { font-size: 15px; color: #666; margin-bottom: 40px; }
+        
+        .steps-wrapper { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .step-item { flex: 1; min-width: 170px; background: white; padding: 20px 15px; border-radius: 12px; border: 1px solid #e1effe; position: relative; }
+        .step-number { width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 12px; font-size: 14px; }
+        .step-item h4 { font-size: 15px; color: var(--primary-dark); margin-bottom: 5px; }
+        .step-item p { font-size: 12px; color: #777; }
 
-        /* Banner Section */
-        .trust-banner { background: linear-gradient(rgba(0, 43, 91, 0.85), rgba(0, 43, 91, 0.85)), url('https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; text-align: center; padding: 60px 5%; margin: 30px 0; }
-        .trust-banner h2 { font-size: 32px; margin-bottom: 10px; }
-        .trust-banner p { font-size: 18px; color: #81d4fa; }
+        /* Gen Z Vibe Corner & Quiz */
+        .vibe-box { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); color: white; border-radius: 20px; padding: 40px 30px; margin: 20px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
+        .vibe-content { flex: 1; min-width: 280px; }
+        .vibe-content h2 { font-size: 28px; color: #38bdf8; margin-bottom: 10px; }
+        .vibe-content p { font-size: 14px; color: #9ca3af; margin-bottom: 20px; }
+        .playlist-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+        .p-tag { background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 20px; font-size: 12px; color: #e5e7eb; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); }
+        .p-tag i { color: #1db954; margin-right: 5px; }
 
-        /* Highlights Grid */
-        .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px 5% 40px; background: white; text-align: center; }
-        .hl-item { padding: 15px; background: #f0f7ff; border-radius: 8px; font-weight: bold; color: #002b5b; border: 1px solid #d0e5ff; }
-        .hl-item i { color: #00a2e8; margin-right: 8px; }
+        /* Hydration Quiz Widget */
+        .quiz-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); padding: 25px; border-radius: 15px; width: 320px; text-align: left; }
+        .quiz-card h3 { font-size: 16px; margin-bottom: 12px; color: #f3f4f6; }
+        .quiz-btn { width: 100%; background: #2563eb; color: white; border: none; padding: 10px; border-radius: 8px; margin-bottom: 8px; cursor: pointer; font-size: 13px; text-align: left; transition: 0.2s; }
+        .quiz-btn:hover { background: #1d4ed8; }
+        #quiz-result { font-size: 13px; color: #38bdf8; margin-top: 10px; font-weight: bold; }
 
-        /* Footer */
-        footer { background: #001f3f; color: white; padding: 40px 5% 20px; }
-        .footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
-        .footer-col { flex: 1; min-width: 250px; }
-        .footer-col h3 { color: #00a2e8; margin-bottom: 15px; font-size: 20px; }
-        .footer-col p, .footer-col li { color: #ccc; font-size: 14px; margin-bottom: 8px; list-style: none; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 13px; color: #aaa; }
+        /* Calculator Section */
+        .calc-wrapper { background: white; border-radius: 16px; padding: 35px; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: left; border: 1px solid #e5e7eb; }
+        .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f3f4f6; flex-wrap: wrap; gap: 10px; }
+        .calc-item-info h4 { font-size: 16px; color: var(--primary-dark); }
+        .calc-item-info p { font-size: 12px; color: #888; }
+        .calc-qty { display: flex; align-items: center; gap: 10px; }
+        .calc-qty input { width: 70px; padding: 8px; border: 1px solid #ccc; border-radius: 6px; text-align: center; font-size: 15px; font-weight: bold; }
+        .calc-summary { margin-top: 25px; background: #f0f7ff; padding: 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .calc-total { font-size: 20px; font-weight: bold; color: var(--primary-dark); }
+        .btn-calc-wa { background: var(--whatsapp); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; }
+
+        /* Eco Counter */
+        .eco-banner { background: #ecfdf5; border: 1px dashed #10b981; padding: 20px; border-radius: 12px; margin: 30px 5%; text-align: center; color: #065f46; font-weight: bold; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+
+        /* FAQ Section */
+        .faq-wrapper { max-width: 750px; margin: 0 auto; text-align: left; }
+        .faq-item { background: white; margin-bottom: 12px; border-radius: 8px; border: 1px solid #e5e7eb; overflow: hidden; }
+        .faq-title { padding: 16px 20px; font-weight: 700; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 15px; }
+        .faq-content { padding: 0 20px 16px; font-size: 13.5px; color: #555; display: none; border-top: 1px solid #f3f4f6; padding-top: 12px; }
+        .faq-item.active .faq-content { display: block; }
+        .faq-item.active .faq-title i { transform: rotate(180deg); }
+
+        /* Footer & Legal Notices */
+        footer { background: #0b132b; color: #a0aec0; padding: 50px 5% 20px; font-size: 13px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-col h3 { color: #ffffff; font-size: 16px; margin-bottom: 15px; }
+        .footer-col p, .footer-col li { margin-bottom: 8px; list-style: none; }
+        .legal-box { background: rgba(255,255,255,0.04); padding: 15px; border-radius: 8px; font-size: 11px; color: #718096; line-height: 1.5; margin-top: 20px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; text-align: center; font-size: 12px; }
+
+        /* Floating WhatsApp Icon */
+        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar -->
+    <!-- Top Bar with Legal Details -->
     <div class="top-bar">
         <div class="top-bar-info">
-            <span><i class="fa-solid fa-location-dot"></i> City Jobner Dist Jaipur, Rajasthan</span>
-            <span><i class="fa-solid fa-phone"></i> +91 9351156730, 8306094775, 9785680971</span>
-            <span><i class="fa-solid fa-shield-heart"></i> Pure Water, Pure Trust.</span>
+            <span><i class="fa-solid fa-location-dot"></i> Jobner, Dist Jaipur, Rajasthan 303328</span>
+            <span><i class="fa-solid fa-phone"></i> +91 9351156730, 8306094775</span>
+            <span><i class="fa-solid fa-building"></i> MA Enterprises (GSTIN: 08CRZPM7630J1ZW)</span>
         </div>
         <div class="social-links">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -90,7 +132,7 @@
         </div>
     </div>
 
-    <!-- Header / Navbar -->
+    <!-- Navigation Header -->
     <header>
         <div class="navbar">
             <div class="logo">
@@ -98,135 +140,263 @@
                 <span>Packaged Drinking Water</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Why Aquelio</a></li>
-                <li><a href="#">Custom Label</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#about">Story</a></li>
+                <li><a href="#process">Purification</a></li>
+                <li><a href="#calculator">Order Calculator</a></li>
+                <li><a href="#faq">FAQs</a></li>
             </ul>
-            <a href="tel:9351156730" class="btn-order"><i class="fa-solid fa-cart-shopping"></i> Order Now</a>
+            <a href="https://wa.me/919351156730?text=Namaste!%20Mujhe%20Aquelio%20water%20order%20karna%20hai." target="_blank" class="btn-order-nav">
+                <i class="fa-brands fa-whatsapp"></i> Quick Order
+            </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <p class="hero-tagline">Pure Water, Pure Trust.</p>
-        <h1 class="hero-title">Aquelio™ Packaged Drinking Water</h1>
-        <p class="hero-sub">हर बूंद में शुद्धता, हर घूंट में ताजगी</p>
-        <div class="offer-badge">
-            होटल, ढाबा, रेस्टोरेंट और कैटरिंग पार्टनर्स के लिए विशेष ऑफर!
+    <!-- Hero Section (Gen Z Storyline) -->
+    <section class="hero" id="about">
+        <span class="hero-badge">Hydration for the Hustle ⚡</span>
+        <h1>Pure Water. <span>Zero Nonsense.</span></h1>
+        <p>Chahe late-night study sessions ho, intense workout, ya wedding events—Aquelio aapko deta hai 100% pure, mineral-balanced hydration har ghunt mein!</p>
+        <div class="hero-btns">
+            <a href="#calculator" class="btn-main">Calculate Order Bill</a>
+            <a href="https://wa.me/919351156730?text=Mujhe%20Custom%20Label%20Booking%20chahiye." target="_blank" class="btn-secondary">Custom Event Labels</a>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="features">
-        <div class="feature-card">
-            <div class="feature-icon"><i class="fa-solid fa-droplet"></i></div>
-            <h3>100% शुद्ध व सुरक्षित</h3>
-            <p>RO + UV + Ozonation मल्टी-स्टेज प्रिफिल्ट्रेशन प्रोसेस</p>
+    <!-- Story Cards -->
+    <div class="story-grid">
+        <div class="story-card">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Always Fresh</h3>
+            <p>Directly bottled under high hygienic standards to maintain natural taste.</p>
         </div>
-        <div class="feature-card">
-            <div class="feature-icon"><i class="fa-solid fa-bottle-water"></i></div>
-            <h3>मजबूत व आकर्षक बोतल</h3>
-            <p>प्रिमियम ग्रिप बोतल, लीक-प्रूफ सील और आकर्षक लेबल</p>
+        <div class="story-card">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Safe & Tested</h3>
+            <p>100% Multi-stage purified water with zero artificial additives.</p>
         </div>
-        <div class="feature-card">
-            <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-            <h3>ज्यादा मुनाफा</h3>
-            <p>अधिक लाभ के लिए व्यापारियों के लिए सही विकल्प</p>
+        <div class="story-card">
+            <i class="fa-solid fa-champagne-glasses"></i>
+            <h3>Event Ready</h3>
+            <p>Customized labels for Weddings, Parties, Hotels & Corporate Meets.</p>
         </div>
-        <div class="feature-card">
-            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3>संपूर्ण भरोसा</h3>
-            <p>स्वच्छ पानी बेहतर स्वास्थ्य की गारंटी</p>
-        </div>
-    </section>
+    </div>
 
-    <!-- Products -->
-    <section class="products-section">
-        <h2 class="section-title">हमारे मुख्य उत्पाद (Our Products)</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-img-box"><i class="fa-solid fa-bottle-water"></i></div>
-                <h3>Aquelio 500 ml</h3>
-                <ul>
-                    <li>24 बोतल बंडल</li>
-                    <li>ढाबों, जिम, रेस्टोरेंट की पहली पसंद!</li>
-                </ul>
-                <span class="btn-badge">500 ml Pack</span>
+    <!-- 5-Step Purification Timeline Section -->
+    <section class="section-padding" id="process">
+        <h2 class="section-title">Hamari 5-Step Purification Technology</h2>
+        <p class="section-sub">Aap tak pahunchne se pehle paani in strict purification steps se guzarta hai:</p>
+        
+        <div class="steps-wrapper">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <h4>Sand Filtration</h4>
+                <p>Mitti aur bade particles ko alag karta hai.</p>
             </div>
-
-            <div class="product-card">
-                <div class="product-img-box"><i class="fa-solid fa-bottle-water"></i></div>
-                <h3>Aquelio 1 Litre</h3>
-                <ul>
-                    <li>12 बोतल बंडल</li>
-                    <li>हाई-क्वालिटी, किराना दुकानों के लिए बेस्ट।</li>
-                </ul>
-                <span class="btn-badge">1 Litre Pack</span>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <h4>Carbon Filter</h4>
+                <p>Odour aur bad smell ko complete remove karta hai.</p>
             </div>
-
-            <div class="product-card">
-                <div class="product-img-box"><i class="fa-solid fa-wine-bottle"></i></div>
-                <h3>Aquelio 200 ml</h3>
-                <ul>
-                    <li>स्पेशल ऑर्डर</li>
-                    <li>शादियों, पार्टियों और इवेंट्स के लिए।</li>
-                </ul>
-                <span class="btn-badge">200 ml Pack</span>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <h4>RO Membrane</h4>
+                <p>Heavy metals aur impurities ko clean karta hai.</p>
             </div>
-
-            <div class="product-card">
-                <div class="product-img-box"><i class="fa-solid fa-tags"></i></div>
-                <h3>Customize Label</h3>
-                <ul>
-                    <li>Wedding & Corporate Events</li>
-                    <li>Hotels & Restaurants</li>
-                    <li>Parties & Special Events</li>
-                </ul>
-                <span class="btn-badge">Custom Booking</span>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <h4>UV Disinfection</h4>
+                <p>Micro-organisms ko puri tarah khatam karta hai.</p>
+            </div>
+            <div class="step-item">
+                <div class="step-number">5</div>
+                <h4>Ozonation</h4>
+                <p>Long freshness aur purity lock karta hai.</p>
             </div>
         </div>
     </section>
 
-    <!-- Regional Trust Banner -->
-    <section class="trust-banner">
-        <h2>राजस्थान की धरती का भरोसा, Aquelio का वादा</h2>
-        <p>शुद्ध पानी, स्वस्थ जीवन, खुशहाल राजस्थान</p>
+    <!-- Gen Z Vibe & Hydration Quiz Corner -->
+    <div class="vibe-box">
+        <div class="vibe-content">
+            <h2>Scan the Vibe 🎧</h2>
+            <p>Hydrate while listening to curated Spotify playlists for your mood:</p>
+            <div class="playlist-tags">
+                <a href="#" class="p-tag"><i class="fa-brands fa-spotify"></i> Study Chill Beats</a>
+                <a href="#" class="p-tag"><i class="fa-brands fa-spotify"></i> Gym Workout Pump</a>
+                <a href="#" class="p-tag"><i class="fa-brands fa-spotify"></i> Road Trip Anthems</a>
+            </div>
+        </div>
+
+        <!-- Interactive Hydration Quiz -->
+        <div class="quiz-card">
+            <h3>Quick Hydration Check 🥤</h3>
+            <p style="font-size: 12px; color: #ccc; margin-bottom: 10px;">Aaj kitna paani peeya?</p>
+            <button class="quiz-btn" onclick="checkHydration('less')">👉 1 Glass se kam</button>
+            <button class="quiz-btn" onclick="checkHydration('medium')">👉 2-3 Glass peeya</button>
+            <button class="quiz-btn" onclick="checkHydration('good')">👉 Full Hydrated hoon!</button>
+            <div id="quiz-result"></div>
+        </div>
+    </div>
+
+    <!-- Eco Banner -->
+    <div class="eco-banner">
+        <i class="fa-solid fa-recycle" style="font-size: 22px;"></i>
+        <span>100% Recyclable Bottles | Responsible Packaging for a Cleaner Rajasthan 🌱</span>
+    </div>
+
+    <!-- Interactive Water Order Calculator -->
+    <section class="section-padding" id="calculator" style="background: #eef5fc;">
+        <h2 class="section-title">Live Order Estimator & Bill Calculator</h2>
+        <p class="section-sub">Slect karein aapko kitne bundle chahiye aur direct WhatsApp par order bhejein:</p>
+
+        <div class="calc-wrapper">
+            <div class="calc-row">
+                <div class="calc-item-info">
+                    <h4>Aquelio 1 Litre Pack</h4>
+                    <p>12 Bottles per Bundle (Retail/Stores/Events)</p>
+                </div>
+                <div class="calc-qty">
+                    <label>Bundles:</label>
+                    <input type="number" id="qty-1l" value="0" min="0" onchange="calculateBill()">
+                </div>
+            </div>
+
+            <div class="calc-row">
+                <div class="calc-item-info">
+                    <h4>Aquelio 500 ml Pack</h4>
+                    <p>24 Bottles per Bundle (Dhaba/Gym/Restaurants)</p>
+                </div>
+                <div class="calc-qty">
+                    <label>Bundles:</label>
+                    <input type="number" id="qty-500ml" value="0" min="0" onchange="calculateBill()">
+                </div>
+            </div>
+
+            <div class="calc-row">
+                <div class="calc-item-info">
+                    <h4>Aquelio 200 ml Pack</h4>
+                    <p>Special Event Order (Weddings/Parties)</p>
+                </div>
+                <div class="calc-qty">
+                    <label>Bundles:</label>
+                    <input type="number" id="qty-200ml" value="0" min="0" onchange="calculateBill()">
+                </div>
+            </div>
+
+            <div class="calc-summary">
+                <div>
+                    <span style="font-size: 12px; color: #666; display: block;">Total Order Quantity:</span>
+                    <div class="calc-total" id="total-summary">0 Bundles Selected</div>
+                </div>
+                <button class="btn-calc-wa" onclick="sendWhatsAppOrder()">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i> Send Order on WhatsApp
+                </button>
+            </div>
+        </div>
     </section>
 
-    <!-- Certifications / Highlights -->
-    <section class="highlights">
-        <div class="hl-item"><i class="fa-solid fa-hand-sparkles"></i> Hygienic Processing</div>
-        <div class="hl-item"><i class="fa-solid fa-heart-pulse"></i> Safe & Healthy</div>
-        <div class="hl-item"><i class="fa-solid fa-users"></i> Trusted by Thousands</div>
+    <!-- FAQ Accordion Section -->
+    <section class="section-padding" id="faq">
+        <h2 class="section-title">Frequently Asked Questions (FAQs)</h2>
+        <p class="section-sub">Aapke aam sawalon ke jawab:</p>
+
+        <div class="faq-wrapper">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-title">Minimum order kitna hona chahiye? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-content">Jobner aur pass ke ilakon mein minimum 5-10 bundles ki delivery aasani se ho jaati hai. Bulks orders par special discount milta hai.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-title">Custom Label Branding mein kitna time lagta hai? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-content">Weddings ya Corporate events ke liye custom bottle design aur printing mein lagbhag 2-4 din ka samay lagta hai.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-title">Kya delivery locations Jobner ke bahar bhi available hai? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-content">Haan, Jaipur district aur aaspas ke sabhi major areas/highways par delivery network available hai.</div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Legal Compliance Notice -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-grid">
             <div class="footer-col">
                 <h3>MA Enterprises</h3>
-                <p>GSTIN: 08CRZPM7630J1ZW</p>
-                <p><i class="fa-solid fa-location-dot"></i> City Jobner Dist Jaipur, State Rajasthan PIN 303328</p>
-                <p><i class="fa-solid fa-phone"></i> Mob: 9351156730, 8306094775, 9785680971</p>
+                <p>Manufacturer & Distributor of Aquelio Packaged Drinking Water.</p>
+                <p><i class="fa-solid fa-location-dot"></i> City Jobner, Dist Jaipur, State Rajasthan - 303328</p>
+                <p><i class="fa-solid fa-phone"></i> Contact: +91 9351156730, 8306094775</p>
             </div>
+
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#" style="color:#ccc; text-decoration:none;">Home</a></li>
-                    <li><a href="#" style="color:#ccc; text-decoration:none;">About Us</a></li>
-                    <li><a href="#" style="color:#ccc; text-decoration:none;">Products</a></li>
-                    <li><a href="#" style="color:#ccc; text-decoration:none;">Custom Label</a></li>
-                    <li><a href="#" style="color:#ccc; text-decoration:none;">Contact Us</a></li>
-                </ul>
+                <h3>Quick Navigation</h3>
+                <li><a href="#about" style="color:#a0aec0; text-decoration:none;">Our Story</a></li>
+                <li><a href="#process" style="color:#a0aec0; text-decoration:none;">Purification Steps</a></li>
+                <li><a href="#calculator" style="color:#a0aec0; text-decoration:none;">Order Estimator</a></li>
+                <li><a href="#faq" style="color:#a0aec0; text-decoration:none;">Help & FAQs</a></li>
+            </div>
+
+            <div class="footer-col">
+                <h3>Business & Legal Info</h3>
+                <p><strong>GSTIN:</strong> 08CRZPM7630J1ZW</p>
+                <p><strong>Quality Assurance:</strong> Processed & Packaged under strict hygiene & quality standards.</p>
             </div>
         </div>
+
+        <div class="legal-box">
+            <strong>Disclaimer & Legal Compliance:</strong> Aquelio™ is a registered product brand manufactured by MA Enterprises. All rights reserved. Water is purified using multi-stage RO, UV, and Ozonation processes. For trade inquiries, wholesale distribution, or grievance redressal, please contact our helpline at 9351156730.
+        </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Aquelio. All Rights Reserved.</p>
+            <p>&copy; 2026 Aquelio Packaged Drinking Water. Built for Business & Trust.</p>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919351156730?text=Namaste!%20Mujhe%20Aquelio%20water%20order%20karna%20hai." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Functions -->
+    <script>
+        // Hydration Quiz Function
+        function checkHydration(type) {
+            let res = document.getElementById('quiz-result');
+            if(type === 'less') {
+                res.innerHTML = "Bro, you are dehydrated! 🚨 Ek Aquelio bottle abhi piyo!";
+            } else if(type === 'medium') {
+                res.innerHTML = "Good going! 👍 Par daily target ke liye 2 bottle aur chahiye.";
+            } else {
+                res.innerHTML = "Hydration Level 100%! 🔥 Stay fresh & stay hydrated!";
+            }
+        }
+
+        // Bill & Order Calculator
+        function calculateBill() {
+            let l1 = parseInt(document.getElementById('qty-1l').value) || 0;
+            let m500 = parseInt(document.getElementById('qty-500ml').value) || 0;
+            let m200 = parseInt(document.getElementById('qty-200ml').value) || 0;
+
+            let totalBundles = l1 + m500 + m200;
+            document.getElementById('total-summary').innerText = totalBundles + " Bundles Selected";
+        }
+
+        function sendWhatsAppOrder() {
+            let l1 = parseInt(document.getElementById('qty-1l').value) || 0;
+            let m500 = parseInt(document.getElementById('qty-500ml').value) || 0;
+            let m200 = parseInt(document.getElementById('qty-200ml').value) || 0;
+
+            if(l1 === 0 && m500 === 0 && m200 === 0) {
+                alert("Kripya kam se kam 1 bundle select karein!");
+                return;
+            }
+
+            let msg = Namaste! Mujhe Naya Water Order dena hai:%0A- 1 Litre: ${l1} Bundles%0A- 500 ml: ${m500} Bundles%0A- 200 ml: ${m200} Bundles%0A%0AKripya price details aur delivery time batayein.;
+            window.open(https://wa.me/919351156730?text=${msg}, '_blank');
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
