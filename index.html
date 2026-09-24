@@ -3,136 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquelio™ | Hydration for the Hustle - Packaged Drinking Water</title>
+    <title>Aquelio™ | Pure Water Revolution - Packaged Drinking Water</title>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #0056b3;
-            --primary-dark: #002b5b;
-            --accent: #00a2e8;
+            --primary: #0284c7;
+            --primary-dark: #0f172a;
+            --accent: #06b6d4;
             --whatsapp: #25d366;
-            --bg-light: #f4f8fb;
+            --bg-light: #f8fafc;
             --card-bg: #ffffff;
-            --text-dark: #2d3436;
+            --text-dark: #1e293b;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
         body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
 
-        /* Top Legal Bar */
-        .top-bar { background: var(--primary-dark); color: #fff; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 10px; }
-        .top-bar-info { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-        .top-bar-info i { color: var(--accent); margin-right: 4px; }
-        .social-links a { color: #fff; margin-left: 10px; text-decoration: none; font-size: 15px; }
+        /* Top Legal Header */
+        .top-bar { background: var(--primary-dark); color: #cbd5e1; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid #334155; }
+        .top-bar-info { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+        .top-bar-info i { color: var(--accent); margin-right: 5px; }
+        .social-links a { color: #cbd5e1; margin-left: 12px; text-decoration: none; font-size: 15px; transition: 0.2s; }
+        .social-links a:hover { color: #ffffff; }
 
-        /* Navbar */
-        header { background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 1000; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 5%; }
-        .logo h1 { color: var(--primary); font-size: 26px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
-        .logo span { color: var(--accent); font-size: 11px; display: block; font-weight: 700; letter-spacing: 0.5px; }
-        .nav-menu { display: flex; list-style: none; gap: 18px; align-items: center; }
-        .nav-menu a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 14px; transition: 0.3s; }
+        /* Navigation Bar */
+        header { background: #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 14px 5%; }
+        .logo h1 { color: var(--primary); font-size: 28px; font-weight: 900; letter-spacing: -0.5px; }
+        .logo span { color: #64748b; font-size: 11px; display: block; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-menu { display: flex; list-style: none; gap: 22px; align-items: center; }
+        .nav-menu a { text-decoration: none; color: #475569; font-weight: 600; font-size: 15px; transition: 0.3s; }
         .nav-menu a:hover { color: var(--primary); }
-        .btn-order-nav { background: var(--whatsapp); color: white; padding: 8px 18px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-order-nav { background: var(--whatsapp); color: white; padding: 9px 20px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25); }
 
-        /* Hero / Gen Z Storyline Section */
-        .hero { background: linear-gradient(135deg, #002b5b 0%, #0056b3 100%); color: white; padding: 70px 5% 80px; text-align: center; position: relative; overflow: hidden; }
-        .hero-badge { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(5px); color: #81d4fa; display: inline-block; padding: 6px 18px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
-        .hero h1 { font-size: 42px; font-weight: 900; margin-bottom: 15px; line-height: 1.2; }
-        .hero h1 span { color: #00d2ff; }
-        .hero p { font-size: 18px; max-width: 750px; margin: 0 auto 30px; color: #e1f5fe; }
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%); color: white; padding: 80px 5% 100px; text-align: center; position: relative; }
+        .hero-tag { background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8; display: inline-block; padding: 6px 20px; border-radius: 30px; font-size: 13px; font-weight: 700; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; }
+        .hero h1 { font-size: 46px; font-weight: 900; margin-bottom: 20px; line-height: 1.25; }
+        .hero h1 span { color: #38bdf8; }
+        .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 35px; color: #e2e8f0; font-weight: 400; }
         .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-        .btn-main { background: var(--accent); color: white; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .btn-main:hover { background: #0086c0; }
-        .btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.4); padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; backdrop-filter: blur(5px); }
+        .btn-main { background: var(--primary); color: white; padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 15px; transition: 0.3s; box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4); }
+        .btn-main:hover { background: #0284c7; transform: translateY(-2px); }
+        .btn-secondary { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); padding: 14px 32px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 15px; backdrop-filter: blur(8px); }
 
-        /* Storyline Cards */
-        .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 5%; margin-top: -40px; position: relative; z-index: 10; }
-        .story-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); text-align: center; border-bottom: 4px solid var(--accent); }
-        .story-card i { font-size: 32px; color: var(--primary); margin-bottom: 12px; }
-        .story-card h3 { font-size: 18px; color: var(--primary-dark); margin-bottom: 8px; }
-        .story-card p { font-size: 13px; color: #666; }
+        /* Storyline Section */
+        .story-section { padding: 80px 5%; background: #ffffff; text-align: center; }
+        .story-badge { color: var(--primary); font-weight: 800; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px; }
+        .story-heading { font-size: 34px; color: var(--primary-dark); font-weight: 800; margin: 10px 0 20px; }
+        .story-text { max-width: 850px; margin: 0 auto 50px; font-size: 16px; color: #475569; text-align: justify; line-height: 1.8; }
+        
+        .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+        .comp-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 30px 25px; text-align: left; transition: 0.3s; }
+        .comp-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); border-color: #cbd5e1; }
+        .comp-card i { font-size: 36px; color: var(--primary); margin-bottom: 18px; }
+        .comp-card h3 { font-size: 20px; color: var(--primary-dark); margin-bottom: 10px; font-weight: 700; }
+        .comp-card p { font-size: 14px; color: #64748b; }
 
         /* 5-Step Purification Timeline */
-        .section-padding { padding: 60px 5%; text-align: center; }
-        .section-title { font-size: 28px; color: var(--primary-dark); margin-bottom: 10px; font-weight: 800; }
-        .section-sub { font-size: 15px; color: #666; margin-bottom: 40px; }
-        
+        .section-padding { padding: 70px 5%; text-align: center; }
+        .section-title { font-size: 32px; color: var(--primary-dark); margin-bottom: 10px; font-weight: 800; }
+        .section-sub { font-size: 16px; color: #64748b; margin-bottom: 50px; }
+
         .steps-wrapper { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
-        .step-item { flex: 1; min-width: 170px; background: white; padding: 20px 15px; border-radius: 12px; border: 1px solid #e1effe; position: relative; }
-        .step-number { width: 35px; height: 35px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 12px; font-size: 14px; }
-        .step-item h4 { font-size: 15px; color: var(--primary-dark); margin-bottom: 5px; }
-        .step-item p { font-size: 12px; color: #777; }
+        .step-item { flex: 1; min-width: 180px; background: white; padding: 25px 18px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .step-number { width: 40px; height: 40px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px; font-size: 16px; box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3); }
+        .step-item h4 { font-size: 16px; color: var(--primary-dark); margin-bottom: 8px; font-weight: 700; }
+        .step-item p { font-size: 13px; color: #64748b; }
 
-        /* Gen Z Vibe Corner & Quiz */
-        .vibe-box { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); color: white; border-radius: 20px; padding: 40px 30px; margin: 20px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px; }
-        .vibe-content { flex: 1; min-width: 280px; }
-        .vibe-content h2 { font-size: 28px; color: #38bdf8; margin-bottom: 10px; }
-        .vibe-content p { font-size: 14px; color: #9ca3af; margin-bottom: 20px; }
-        .playlist-tags { display: flex; gap: 10px; flex-wrap: wrap; }
-        .p-tag { background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 20px; font-size: 12px; color: #e5e7eb; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); }
-        .p-tag i { color: #1db954; margin-right: 5px; }
+        /* Order Calculator Section */
+        .calc-container { background: #ffffff; border-radius: 20px; padding: 40px; max-width: 850px; margin: 0 auto; box-shadow: 0 10px 35px rgba(0,0,0,0.07); border: 1px solid #e2e8f0; text-align: left; }
+        .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #f1f5f9; flex-wrap: wrap; gap: 15px; }
+        .calc-info h4 { font-size: 18px; color: var(--primary-dark); font-weight: 700; }
+        .calc-info p { font-size: 13px; color: #64748b; }
+        .calc-price-tag { font-size: 13px; color: var(--primary); font-weight: 700; margin-top: 4px; }
+        
+        .calc-controls { display: flex; align-items: center; gap: 12px; }
+        .btn-qty { width: 36px; height: 36px; border-radius: 8px; border: 1px solid #cbd5e1; background: #f8fafc; font-size: 18px; font-weight: bold; cursor: pointer; color: var(--primary-dark); transition: 0.2s; }
+        .btn-qty:hover { background: #e2e8f0; }
+        .qty-input { width: 60px; height: 36px; text-align: center; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 16px; font-weight: 700; color: var(--primary-dark); }
+        .item-subtotal { font-weight: 800; color: var(--primary-dark); width: 90px; text-align: right; font-size: 16px; }
 
-        /* Hydration Quiz Widget */
-        .quiz-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); padding: 25px; border-radius: 15px; width: 320px; text-align: left; }
-        .quiz-card h3 { font-size: 16px; margin-bottom: 12px; color: #f3f4f6; }
-        .quiz-btn { width: 100%; background: #2563eb; color: white; border: none; padding: 10px; border-radius: 8px; margin-bottom: 8px; cursor: pointer; font-size: 13px; text-align: left; transition: 0.2s; }
-        .quiz-btn:hover { background: #1d4ed8; }
-        #quiz-result { font-size: 13px; color: #38bdf8; margin-top: 10px; font-weight: bold; }
+        .calc-bill-summary { margin-top: 30px; background: #f0f9ff; border: 1px solid #bae6fd; padding: 25px; border-radius: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .bill-details { display: flex; flex-direction: column; }
+        .bill-total-title { font-size: 13px; color: #0369a1; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .bill-total-price { font-size: 28px; font-weight: 900; color: var(--primary-dark); margin-top: 2px; }
+        .bill-bundle-count { font-size: 13px; color: #64748b; font-weight: 600; }
+        
+        .btn-send-wa { background: var(--whatsapp); color: white; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: 0.3s; }
+        .btn-send-wa:hover { transform: scale(1.02); }
 
-        /* Calculator Section */
-        .calc-wrapper { background: white; border-radius: 16px; padding: 35px; max-width: 800px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.06); text-align: left; border: 1px solid #e5e7eb; }
-        .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f3f4f6; flex-wrap: wrap; gap: 10px; }
-        .calc-item-info h4 { font-size: 16px; color: var(--primary-dark); }
-        .calc-item-info p { font-size: 12px; color: #888; }
-        .calc-qty { display: flex; align-items: center; gap: 10px; }
-        .calc-qty input { width: 70px; padding: 8px; border: 1px solid #ccc; border-radius: 6px; text-align: center; font-size: 15px; font-weight: bold; }
-        .calc-summary { margin-top: 25px; background: #f0f7ff; padding: 20px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .calc-total { font-size: 20px; font-weight: bold; color: var(--primary-dark); }
-        .btn-calc-wa { background: var(--whatsapp); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; border: none; cursor: pointer; }
+        /* FAQ Accordion */
+        .faq-wrapper { max-width: 800px; margin: 0 auto; text-align: left; }
+        .faq-item { background: white; margin-bottom: 14px; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .faq-header { padding: 18px 24px; font-weight: 700; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 16px; background: #ffffff; user-select: none; transition: 0.2s; }
+        .faq-header:hover { background: #f8fafc; }
+        .faq-icon { color: var(--primary); font-size: 16px; transition: transform 0.3s ease; }
+        .faq-body { display: none; padding: 0 24px 20px; font-size: 14.5px; color: #475569; border-top: 1px solid #f1f5f9; padding-top: 15px; line-height: 1.7; background: #ffffff; }
+        .faq-item.active .faq-body { display: block; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
 
-        /* Eco Counter */
-        .eco-banner { background: #ecfdf5; border: 1px dashed #10b981; padding: 20px; border-radius: 12px; margin: 30px 5%; text-align: center; color: #065f46; font-weight: bold; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        /* Footer */
+        footer { background: #0f172a; color: #94a3b8; padding: 60px 5% 25px; font-size: 14px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-col h3 { color: #ffffff; font-size: 17px; margin-bottom: 18px; font-weight: 700; }
+        .footer-col p, .footer-col li { margin-bottom: 10px; list-style: none; }
+        .legal-notice { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 20px; border-radius: 10px; font-size: 12px; color: #64748b; line-height: 1.6; margin-top: 30px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 25px; text-align: center; font-size: 13px; color: #64748b; }
 
-        /* FAQ Section */
-        .faq-wrapper { max-width: 750px; margin: 0 auto; text-align: left; }
-        .faq-item { background: white; margin-bottom: 12px; border-radius: 8px; border: 1px solid #e5e7eb; overflow: hidden; }
-        .faq-title { padding: 16px 20px; font-weight: 700; color: var(--primary-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 15px; }
-        .faq-content { padding: 0 20px 16px; font-size: 13.5px; color: #555; display: none; border-top: 1px solid #f3f4f6; padding-top: 12px; }
-        .faq-item.active .faq-content { display: block; }
-        .faq-item.active .faq-title i { transform: rotate(180deg); }
-
-        /* Footer & Legal Notices */
-        footer { background: #0b132b; color: #a0aec0; padding: 50px 5% 20px; font-size: 13px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; }
-        .footer-col h3 { color: #ffffff; font-size: 16px; margin-bottom: 15px; }
-        .footer-col p, .footer-col li { margin-bottom: 8px; list-style: none; }
-        .legal-box { background: rgba(255,255,255,0.04); padding: 15px; border-radius: 8px; font-size: 11px; color: #718096; line-height: 1.5; margin-top: 20px; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; text-align: center; font-size: 12px; }
-
-        /* Floating WhatsApp Icon */
-        .whatsapp-float { position: fixed; width: 55px; height: 55px; bottom: 20px; right: 20px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
+        /* Floating WhatsApp */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px; background-color: var(--whatsapp); color: #FFF; border-radius: 50px; text-align: center; font-size: 32px; box-shadow: 0 6px 20px rgba(0,0,0,0.25); z-index: 10000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: 0.3s; }
         .whatsapp-float:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar with Legal Details -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-info">
-            <span><i class="fa-solid fa-location-dot"></i> Jobner, Dist Jaipur, Rajasthan 303328</span>
+            <span><i class="fa-solid fa-location-dot"></i> Jobner, Dist. Jaipur, Rajasthan 303328</span>
             <span><i class="fa-solid fa-phone"></i> +91 9351156730, 8306094775</span>
-            <span><i class="fa-solid fa-building"></i> MA Enterprises (GSTIN: 08CRZPM7630J1ZW)</span>
+            <span><i class="fa-solid fa-shield-halved"></i> MA Enterprises (GSTIN: 08CRZPM7630J1ZW)</span>
         </div>
         <div class="social-links">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </div>
 
-    <!-- Navigation Header -->
+    <!-- Navigation Bar -->
     <header>
         <div class="navbar">
             <div class="logo">
@@ -140,7 +141,7 @@
                 <span>Packaged Drinking Water</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#about">Story</a></li>
+                <li><a href="#story">Our Story</a></li>
                 <li><a href="#process">Purification</a></li>
                 <li><a href="#calculator">Order Calculator</a></li>
                 <li><a href="#faq">FAQs</a></li>
@@ -151,202 +152,225 @@
         </div>
     </header>
 
-    <!-- Hero Section (Gen Z Storyline) -->
-    <section class="hero" id="about">
-        <span class="hero-badge">Hydration for the Hustle ⚡</span>
-        <h1>Pure Water. <span>Zero Nonsense.</span></h1>
-        <p>Chahe late-night study sessions ho, intense workout, ya wedding events—Aquelio aapko deta hai 100% pure, mineral-balanced hydration har ghunt mein!</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="hero-tag">Pure Water Revolution 💧</span>
+        <h1>Boond Boond Mein <span>Vishwas Aur Shuddhata</span></h1>
+        <p>Badi companies sirf paani bechti hain—Aquelio aapko deta hai 100% Ultra-Fresh multi-stage purified water, pure mineral balance aur har event ke liye custom branding advantage!</p>
         <div class="hero-btns">
-            <a href="#calculator" class="btn-main">Calculate Order Bill</a>
-            <a href="https://wa.me/919351156730?text=Mujhe%20Custom%20Label%20Booking%20chahiye." target="_blank" class="btn-secondary">Custom Event Labels</a>
+            <a href="#calculator" class="btn-main"><i class="fa-solid fa-calculator"></i> Order & Bill Estimator</a>
+            <a href="#story" class="btn-secondary">Kyun Hai Aquelio Alag?</a>
         </div>
     </section>
 
-    <!-- Story Cards -->
-    <div class="story-grid">
-        <div class="story-card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>Always Fresh</h3>
-            <p>Directly bottled under high hygienic standards to maintain natural taste.</p>
+    <!-- Brand Story Section -->
+    <section class="story-section" id="story">
+        <span class="story-badge">The Aquelio Advantage</span>
+        <h2 class="story-heading">Badi Companies Se Aage—Humara Vada Purity Ka</h2>
+        <div class="story-text">
+            <p><strong>Aquelio™</strong> ki shuruaat ek simple soch ke saath hui: <em>"Aapko milne wala paani hamesha super-fresh, safe aur transparent hona chahiye."</em> Badi national brands hafto purana stock warehouse se supply karti hain aur excessive marketing expenses ka bojh customer par daalti hain.</p>
+            <br>
+            <p>Humari modern automated plant unit (Jobner, Jaipur) mein har bottle *RO + UV + Ozonation 7-Stage Purification* se guzar kar bilkul fresh pack hoti hai. Hum na sirf pure drinking water dete hain, balki Rajasthan ke Shaadi, Events, Hotels aur Cafes ko unke apne *Custom Label Branding* ki facility bhi dete hain.</p>
         </div>
-        <div class="story-card">
-            <i class="fa-solid fa-leaf"></i>
-            <h3>Safe & Tested</h3>
-            <p>100% Multi-stage purified water with zero artificial additives.</p>
-        </div>
-        <div class="story-card">
-            <i class="fa-solid fa-champagne-glasses"></i>
-            <h3>Event Ready</h3>
-            <p>Customized labels for Weddings, Parties, Hotels & Corporate Meets.</p>
-        </div>
-    </div>
 
-    <!-- 5-Step Purification Timeline Section -->
-    <section class="section-padding" id="process">
+        <div class="comp-grid">
+            <div class="comp-card">
+                <i class="fa-solid fa-bottle-droplet"></i>
+                <h3>100% Ultra Fresh Bottling</h3>
+                <p>National brands ka purana stock nahi—aapko milta hai direct plant se fresh packaged pure water.</p>
+            </div>
+            <div class="comp-card">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <h3>Custom Event Labels</h3>
+                <p>Shaadi, Birthday ya Corporate meets ke liye aapke naam/logo ke saath customized bottle design.</p>
+            </div>
+            <div class="comp-card">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <h3>Direct Wholesale Rate</h3>
+                <p>Bina kisi middlemen cost ke direct manufacturer rate par delivery, business aur retail dono ke liye.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-Step Purification Timeline -->
+    <section class="section-padding" id="process" style="background: #f1f5f9;">
         <h2 class="section-title">Hamari 5-Step Purification Technology</h2>
-        <p class="section-sub">Aap tak pahunchne se pehle paani in strict purification steps se guzarta hai:</p>
+        <p class="section-sub">Aap tak pahunchne se pehle paani in strict multi-stage purification steps se guzarta hai:</p>
         
         <div class="steps-wrapper">
             <div class="step-item">
                 <div class="step-number">1</div>
                 <h4>Sand Filtration</h4>
-                <p>Mitti aur bade particles ko alag karta hai.</p>
+                <p>Mitti aur bade suspended particles ko completely remove karta hai.</p>
             </div>
             <div class="step-item">
                 <div class="step-number">2</div>
                 <h4>Carbon Filter</h4>
-                <p>Odour aur bad smell ko complete remove karta hai.</p>
+                <p>Odour, Chlorine aur bad taste ko neutralize karta hai.</p>
             </div>
             <div class="step-item">
                 <div class="step-number">3</div>
                 <h4>RO Membrane</h4>
-                <p>Heavy metals aur impurities ko clean karta hai.</p>
+                <p>Dissolved salts aur heavy metals ko purify karta hai.</p>
             </div>
             <div class="step-item">
                 <div class="step-number">4</div>
                 <h4>UV Disinfection</h4>
-                <p>Micro-organisms ko puri tarah khatam karta hai.</p>
+                <p>Micro-organisms aur bacteria ko 100% eliminate karta hai.</p>
             </div>
             <div class="step-item">
                 <div class="step-number">5</div>
                 <h4>Ozonation</h4>
-                <p>Long freshness aur purity lock karta hai.</p>
+                <p>Bottle locking aur long shelf-life freshness ke liye final ozone treatment.</p>
             </div>
         </div>
     </section>
 
-    <!-- Gen Z Vibe & Hydration Quiz Corner -->
-    <div class="vibe-box">
-        <div class="vibe-content">
-            <h2>Scan the Vibe 🎧</h2>
-            <p>Hydrate while listening to curated Spotify playlists for your mood:</p>
-            <div class="playlist-tags">
-                <a href="#" class="p-tag"><i class="fa-brands fa-spotify"></i> Study Chill Beats</a>
-                <a href="#" class="p-tag"><i class="fa-brands fa-spotify"></i> Gym Workout Pump</a>
-                <a href="#" class="p-tag"><i class="fa-brands fa-spotify"></i> Road Trip Anthems</a>
-            </div>
-        </div>
-
-        <!-- Interactive Hydration Quiz -->
-        <div class="quiz-card">
-            <h3>Quick Hydration Check 🥤</h3>
-            <p style="font-size: 12px; color: #ccc; margin-bottom: 10px;">Aaj kitna paani peeya?</p>
-            <button class="quiz-btn" onclick="checkHydration('less')">👉 1 Glass se kam</button>
-            <button class="quiz-btn" onclick="checkHydration('medium')">👉 2-3 Glass peeya</button>
-            <button class="quiz-btn" onclick="checkHydration('good')">👉 Full Hydrated hoon!</button>
-            <div id="quiz-result"></div>
-        </div>
-    </div>
-
-    <!-- Eco Banner -->
-    <div class="eco-banner">
-        <i class="fa-solid fa-recycle" style="font-size: 22px;"></i>
-        <span>100% Recyclable Bottles | Responsible Packaging for a Cleaner Rajasthan 🌱</span>
-    </div>
-
-    <!-- Interactive Water Order Calculator -->
-    <section class="section-padding" id="calculator" style="background: #eef5fc;">
+    <!-- Order Calculator Section -->
+    <section class="section-padding" id="calculator">
         <h2 class="section-title">Live Order Estimator & Bill Calculator</h2>
-        <p class="section-sub">Slect karein aapko kitne bundle chahiye aur direct WhatsApp par order bhejein:</p>
+        <p class="section-sub">Aapko kitne bundle chahiye select karein—live rate aur bill total turant dekhein:</p>
 
-        <div class="calc-wrapper">
+        <div class="calc-container">
+            <!-- 1 Litre Item -->
             <div class="calc-row">
-                <div class="calc-item-info">
+                <div class="calc-info">
                     <h4>Aquelio 1 Litre Pack</h4>
-                    <p>12 Bottles per Bundle (Retail/Stores/Events)</p>
+                    <p>12 Bottles per Bundle (For Daily & Retail)</p>
+                    <div class="calc-price-tag">Rate: ₹120 per Bundle</div>
                 </div>
-                <div class="calc-qty">
-                    <label>Bundles:</label>
-                    <input type="number" id="qty-1l" value="0" min="0" onchange="calculateBill()">
+                <div class="calc-controls">
+                    <button class="btn-qty" onclick="adjustQty('qty-1l', -1)">-</button>
+                    <input type="number" id="qty-1l" class="qty-input" value="0" min="0" readonly>
+                    <button class="btn-qty" onclick="adjustQty('qty-1l', 1)">+</button>
                 </div>
+                <div class="item-subtotal" id="subtotal-1l">₹0</div>
             </div>
 
+            <!-- 500 ml Item -->
             <div class="calc-row">
-                <div class="calc-item-info">
+                <div class="calc-info">
                     <h4>Aquelio 500 ml Pack</h4>
-                    <p>24 Bottles per Bundle (Dhaba/Gym/Restaurants)</p>
+                    <p>24 Bottles per Bundle (For Dhabas, Gyms & Travel)</p>
+                    <div class="calc-price-tag">Rate: ₹140 per Bundle</div>
                 </div>
-                <div class="calc-qty">
-                    <label>Bundles:</label>
-                    <input type="number" id="qty-500ml" value="0" min="0" onchange="calculateBill()">
+                <div class="calc-controls">
+                    <button class="btn-qty" onclick="adjustQty('qty-500ml', -1)">-</button>
+                    <input type="number" id="qty-500ml" class="qty-input" value="0" min="0" readonly>
+                    <button class="btn-qty" onclick="adjustQty('qty-500ml', 1)">+</button>
                 </div>
+                <div class="item-subtotal" id="subtotal-500ml">₹0</div>
             </div>
 
+            <!-- 200 ml Item -->
             <div class="calc-row">
-                <div class="calc-item-info">
-                    <h4>Aquelio 200 ml Pack</h4>
-                    <p>Special Event Order (Weddings/Parties)</p>
+                <div class="calc-info">
+                    <h4>Aquelio 200 ml Event Pack</h4>
+                    <p>48 Bottles per Bundle (Weddings & Party Special)</p>
+                    <div class="calc-price-tag">Rate: ₹160 per Bundle</div>
                 </div>
-                <div class="calc-qty">
-                    <label>Bundles:</label>
-                    <input type="number" id="qty-200ml" value="0" min="0" onchange="calculateBill()">
+                <div class="calc-controls">
+                    <button class="btn-qty" onclick="adjustQty('qty-200ml', -1)">-</button>
+                    <input type="number" id="qty-200ml" class="qty-input" value="0" min="0" readonly>
+                    <button class="btn-qty" onclick="adjustQty('qty-200ml', 1)">+</button>
                 </div>
+                <div class="item-subtotal" id="subtotal-200ml">₹0</div>
             </div>
 
-            <div class="calc-summary">
-                <div>
-                    <span style="font-size: 12px; color: #666; display: block;">Total Order Quantity:</span>
-                    <div class="calc-total" id="total-summary">0 Bundles Selected</div>
+            <!-- Bill Summary Footer -->
+            <div class="calc-bill-summary">
+                <div class="bill-details">
+                    <span class="bill-total-title">Estimated Total Bill</span>
+                    <div class="bill-total-price" id="grand-total-price">₹0</div>
+                    <span class="bill-bundle-count" id="grand-bundle-count">0 Bundles Selected</span>
                 </div>
-                <button class="btn-calc-wa" onclick="sendWhatsAppOrder()">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i> Send Order on WhatsApp
+                <button class="btn-send-wa" onclick="sendWhatsAppBillOrder()">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Order Now on WhatsApp
                 </button>
             </div>
         </div>
     </section>
 
     <!-- FAQ Accordion Section -->
-    <section class="section-padding" id="faq">
+    <section class="section-padding" id="faq" style="background: #f8fafc;">
         <h2 class="section-title">Frequently Asked Questions (FAQs)</h2>
-        <p class="section-sub">Aapke aam sawalon ke jawab:</p>
+        <p class="section-sub">Aapke aam sawalon ke aasan jawab:</p>
 
         <div class="faq-wrapper">
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-title">Minimum order kitna hona chahiye? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-content">Jobner aur pass ke ilakon mein minimum 5-10 bundles ki delivery aasani se ho jaati hai. Bulks orders par special discount milta hai.</div>
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>Minimum order kitna hona chahiye?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                </div>
+                <div class="faq-body">
+                    Jobner aur aaspas ke ilakon mein minimum 5 se 10 bundles ki delivery aasani se ho jaati hai. Bulk orders (Shaadi ya Large Events) ke liye special wholesale discount bhi diya jaata hai.
+                </div>
             </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-title">Custom Label Branding mein kitna time lagta hai? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-content">Weddings ya Corporate events ke liye custom bottle design aur printing mein lagbhag 2-4 din ka samay lagta hai.</div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>Custom Event Label (Shaadi/Business) kaise banwayen?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                </div>
+                <div class="faq-body">
+                    Aap humare WhatsApp number par apne event ka naam, photo ya logo bhej sakte hain. Humari team 2-3 dino ke andar aapke custom label print karke bottles ready kar deti hai.
+                </div>
             </div>
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-title">Kya delivery locations Jobner ke bahar bhi available hai? <i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-content">Haan, Jaipur district aur aaspas ke sabhi major areas/highways par delivery network available hai.</div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>Delivery kin-kin ilakon mein available hai?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                </div>
+                <div class="faq-body">
+                    Humari main plant Unit Jobner (Jaipur) mein hai. Jobner, Phulera, Asalpur, Jaipur city aur aaspas ke sabhi major highways/gardens mein delivery available hai.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>Kya Aquelio water BIS / FSSAI Quality Approved hai?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                </div>
+                <div class="faq-body">
+                    Ji haan! Aquelio Packaged Drinking Water poori tarah strict Quality Standards, FSSAI hygiene protocols aur multi-stage lab tested purification process ke tahat तैयार kiya jata hai.
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer with Legal Compliance Notice -->
+    <!-- Footer Section -->
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <h3>MA Enterprises</h3>
-                <p>Manufacturer & Distributor of Aquelio Packaged Drinking Water.</p>
-                <p><i class="fa-solid fa-location-dot"></i> City Jobner, Dist Jaipur, State Rajasthan - 303328</p>
-                <p><i class="fa-solid fa-phone"></i> Contact: +91 9351156730, 8306094775</p>
+                <p>Manufacturer & Supplier of Aquelio Packaged Drinking Water.</p>
+                <p><i class="fa-solid fa-location-dot"></i> Jobner, Dist. Jaipur, Rajasthan - 303328</p>
+                <p><i class="fa-solid fa-phone"></i> Helpline: +91 9351156730, 8306094775</p>
             </div>
 
             <div class="footer-col">
-                <h3>Quick Navigation</h3>
-                <li><a href="#about" style="color:#a0aec0; text-decoration:none;">Our Story</a></li>
-                <li><a href="#process" style="color:#a0aec0; text-decoration:none;">Purification Steps</a></li>
-                <li><a href="#calculator" style="color:#a0aec0; text-decoration:none;">Order Estimator</a></li>
-                <li><a href="#faq" style="color:#a0aec0; text-decoration:none;">Help & FAQs</a></li>
+                <h3>Quick Links</h3>
+                <li><a href="#story" style="color:#94a3b8; text-decoration:none;">Our Story & Advantage</a></li>
+                <li><a href="#process" style="color:#94a3b8; text-decoration:none;">5-Step Purification</a></li>
+                <li><a href="#calculator" style="color:#94a3b8; text-decoration:none;">Bill Calculator</a></li>
+                <li><a href="#faq" style="color:#94a3b8; text-decoration:none;">FAQs & Support</a></li>
             </div>
 
             <div class="footer-col">
-                <h3>Business & Legal Info</h3>
+                <h3>Business & GST Info</h3>
+                <p><strong>Firm Name:</strong> MA Enterprises</p>
                 <p><strong>GSTIN:</strong> 08CRZPM7630J1ZW</p>
-                <p><strong>Quality Assurance:</strong> Processed & Packaged under strict hygiene & quality standards.</p>
+                <p><strong>Supply Types:</strong> Retail, Bulk Supply, Event Custom Bottles.</p>
             </div>
         </div>
 
-        <div class="legal-box">
-            <strong>Disclaimer & Legal Compliance:</strong> Aquelio™ is a registered product brand manufactured by MA Enterprises. All rights reserved. Water is purified using multi-stage RO, UV, and Ozonation processes. For trade inquiries, wholesale distribution, or grievance redressal, please contact our helpline at 9351156730.
+        <div class="legal-notice">
+            <strong>Legal Disclaimer & Quality Compliance:</strong> Aquelio™ is a quality product brand owned and operated by MA Enterprises. All rights reserved. Water is purified using multi-stage RO, UV, and Ozonation. For direct trade inquiries or agency franchise, please call +91 9351156730.
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Aquelio Packaged Drinking Water. Built for Business & Trust.</p>
+            <p>&copy; 2026 Aquelio™ Packaged Drinking Water. Built with Trust & Pure Purpose.</p>
         </div>
     </footer>
 
@@ -357,45 +381,80 @@
 
     <!-- JavaScript Functions -->
     <script>
-        // Hydration Quiz Function
-        function checkHydration(type) {
-            let res = document.getElementById('quiz-result');
-            if(type === 'less') {
-                res.innerHTML = "Bro, you are dehydrated! 🚨 Ek Aquelio bottle abhi piyo!";
-            } else if(type === 'medium') {
-                res.innerHTML = "Good going! 👍 Par daily target ke liye 2 bottle aur chahiye.";
-            } else {
-                res.innerHTML = "Hydration Level 100%! 🔥 Stay fresh & stay hydrated!";
-            }
+        const RATES = {
+            'qty-1l': 120,
+            'qty-500ml': 140,
+            'qty-200ml': 160
+        };
+
+        function adjustQty(id, change) {
+            let input = document.getElementById(id);
+            let currentVal = parseInt(input.value) || 0;
+            let newVal = currentVal + change;
+            if (newVal < 0) newVal = 0;
+            input.value = newVal;
+            
+            calculateBill();
         }
 
-        // Bill & Order Calculator
         function calculateBill() {
-            let l1 = parseInt(document.getElementById('qty-1l').value) || 0;
-            let m500 = parseInt(document.getElementById('qty-500ml').value) || 0;
-            let m200 = parseInt(document.getElementById('qty-200ml').value) || 0;
+            let q1l = parseInt(document.getElementById('qty-1l').value) || 0;
+            let q500ml = parseInt(document.getElementById('qty-500ml').value) || 0;
+            let q200ml = parseInt(document.getElementById('qty-200ml').value) || 0;
 
-            let totalBundles = l1 + m500 + m200;
-            document.getElementById('total-summary').innerText = totalBundles + " Bundles Selected";
+            let sub1l = q1l * RATES['qty-1l'];
+            let sub500ml = q500ml * RATES['qty-500ml'];
+            let sub200ml = q200ml * RATES['qty-200ml'];
+
+            document.getElementById('subtotal-1l').innerText = '₹' + sub1l;
+            document.getElementById('subtotal-500ml').innerText = '₹' + sub500ml;
+            document.getElementById('subtotal-200ml').innerText = '₹' + sub200ml;
+
+            let grandTotal = sub1l + sub500ml + sub200ml;
+            let totalBundles = q1l + q500ml + q200ml;
+
+            document.getElementById('grand-total-price').innerText = '₹' + grandTotal;
+            document.getElementById('grand-bundle-count').innerText = totalBundles + ' Bundles Selected';
         }
 
-        function sendWhatsAppOrder() {
-            let l1 = parseInt(document.getElementById('qty-1l').value) || 0;
-            let m500 = parseInt(document.getElementById('qty-500ml').value) || 0;
-            let m200 = parseInt(document.getElementById('qty-200ml').value) || 0;
+        function sendWhatsAppBillOrder() {
+            let q1l = parseInt(document.getElementById('qty-1l').value) || 0;
+            let q500ml = parseInt(document.getElementById('qty-500ml').value) || 0;
+            let q200ml = parseInt(document.getElementById('qty-200ml').value) || 0;
 
-            if(l1 === 0 && m500 === 0 && m200 === 0) {
+            let totalBundles = q1l + q500ml + q200ml;
+
+            if (totalBundles === 0) {
                 alert("Kripya kam se kam 1 bundle select karein!");
                 return;
             }
 
-            let msg = Namaste! Mujhe Naya Water Order dena hai:%0A- 1 Litre: ${l1} Bundles%0A- 500 ml: ${m500} Bundles%0A- 200 ml: ${m200} Bundles%0A%0AKripya price details aur delivery time batayein.;
+            let grandTotal = (q1l * RATES['qty-1l']) + (q500ml * RATES['qty-500ml']) + (q200ml * RATES['qty-200ml']);
+
+            let msg = *NEW AQUELIO WATER ORDER*%0A%0A +
+                      📦 *Order Summary:*%0A +
+                      (q1l > 0 ? - 1 Litre (12 Btls): ${q1l} Bundles (₹${q1l * RATES['qty-1l']})%0A : '') +
+                      (q500ml > 0 ? - 500 ml (24 Btls): ${q500ml} Bundles (₹${q500ml * RATES['qty-500ml']})%0A : '') +
+                      (q200ml > 0 ? - 200 ml Event (48 Btls): ${q200ml} Bundles (₹${q200ml * RATES['qty-200ml']})%0A : '') +
+                      %0A📊 *Total Bundles:* ${totalBundles} +
+                      %0A💰 *Estimated Bill Total:* ₹${grandTotal} +
+                      %0A%0AKripya delivery confirmation aur payment details bhej dein.;
+
             window.open(https://wa.me/919351156730?text=${msg}, '_blank');
         }
 
-        // FAQ Toggle
-        function toggleFaq(element) {
-            element.classList.toggle('active');
+        function toggleFaq(headerElement) {
+            let item = headerElement.parentElement;
+            let isActive = item.classList.contains('active');
+
+            let allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(el => {
+                el.classList.remove('active');
+            });
+
+            if (!isActive) {
+                item.classList.add('active');
+            }
         }
     </script>
 </body>
