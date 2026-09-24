@@ -15,10 +15,15 @@
             --bg-light: #f8fafc;
             --card-bg: #ffffff;
             --text-dark: #1e293b;
+            --offer-red: #e11d48;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
         body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+        /* Offer Ticker Banner */
+        .offer-banner { background: linear-gradient(90deg, #dc2626, #e11d48); color: white; text-align: center; padding: 8px 15px; font-weight: 700; font-size: 14px; letter-spacing: 0.5px; box-shadow: 0 2px 10px rgba(225, 29, 72, 0.3); }
+        .offer-banner i { margin-right: 8px; font-size: 16px; }
 
         /* Top Legal Header */
         .top-bar { background: var(--primary-dark); color: #cbd5e1; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 13px; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid #334155; }
@@ -61,18 +66,11 @@
         .comp-card h3 { font-size: 20px; color: var(--primary-dark); margin-bottom: 10px; font-weight: 700; }
         .comp-card p { font-size: 14px; color: #64748b; }
 
-        /* 5-Step Purification Timeline */
+        /* Order Calculator Section */
         .section-padding { padding: 70px 5%; text-align: center; }
         .section-title { font-size: 32px; color: var(--primary-dark); margin-bottom: 10px; font-weight: 800; }
         .section-sub { font-size: 16px; color: #64748b; margin-bottom: 50px; }
 
-        .steps-wrapper { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
-        .step-item { flex: 1; min-width: 180px; background: white; padding: 25px 18px; border-radius: 14px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-        .step-number { width: 40px; height: 40px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px; font-size: 16px; box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3); }
-        .step-item h4 { font-size: 16px; color: var(--primary-dark); margin-bottom: 8px; font-weight: 700; }
-        .step-item p { font-size: 13px; color: #64748b; }
-
-        /* Order Calculator Section */
         .calc-container { background: #ffffff; border-radius: 20px; padding: 40px; max-width: 850px; margin: 0 auto; box-shadow: 0 10px 35px rgba(0,0,0,0.07); border: 1px solid #e2e8f0; text-align: left; }
         .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #f1f5f9; flex-wrap: wrap; gap: 15px; }
         .calc-info h4 { font-size: 18px; color: var(--primary-dark); font-weight: 700; }
@@ -90,6 +88,7 @@
         .bill-total-title { font-size: 13px; color: #0369a1; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
         .bill-total-price { font-size: 28px; font-weight: 900; color: var(--primary-dark); margin-top: 2px; }
         .bill-bundle-count { font-size: 13px; color: #64748b; font-weight: 600; }
+        .offer-free-tag { font-size: 13px; color: #dc2626; font-weight: 800; margin-top: 4px; display: none; }
         
         .btn-send-wa { background: var(--whatsapp); color: white; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 800; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); transition: 0.3s; }
         .btn-send-wa:hover { transform: scale(1.02); }
@@ -119,6 +118,11 @@
 </head>
 <body>
 
+    <!-- Limited Time Offer Banner -->
+    <div class="offer-banner">
+        <i class="fa-solid fa-gift"></i> LIMITED TIME OFFER: Har 10 Patti Ke Order Par 1 Patti Bilkul FREE! 🎁
+    </div>
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-bar-info">
@@ -142,7 +146,6 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#story">Our Story</a></li>
-                <li><a href="#process">Purification</a></li>
                 <li><a href="#calculator">Order Calculator</a></li>
                 <li><a href="#faq">FAQs</a></li>
             </ul>
@@ -156,7 +159,7 @@
     <section class="hero">
         <span class="hero-tag">Pure Water Revolution 💧</span>
         <h1>Boond Boond Mein <span>Vishwas Aur Shuddhata</span></h1>
-        <p>Badi companies sirf paani bechti hain—Aquelio aapko deta hai 100% Ultra-Fresh multi-stage purified water, pure mineral balance aur har event ke liye custom branding advantage!</p>
+        <p>Aquelio aapko deta hai 100% Ultra-Fresh multi-stage purified water, pure mineral balance aur har event ke liye custom branding advantage!</p>
         <div class="hero-btns">
             <a href="#calculator" class="btn-main"><i class="fa-solid fa-calculator"></i> Order & Bill Estimator</a>
             <a href="#story" class="btn-secondary">Kyun Hai Aquelio Alag?</a>
@@ -170,7 +173,7 @@
         <div class="story-text">
             <p><strong>Aquelio™</strong> ki shuruaat ek simple soch ke saath hui: <em>"Aapko milne wala paani hamesha super-fresh, safe aur transparent hona chahiye."</em> Badi national brands hafto purana stock warehouse se supply karti hain aur excessive marketing expenses ka bojh customer par daalti hain.</p>
             <br>
-            <p>Humari modern automated plant unit (Jobner, Jaipur) mein har bottle *RO + UV + Ozonation 7-Stage Purification* se guzar kar bilkul fresh pack hoti hai. Hum na sirf pure drinking water dete hain, balki Rajasthan ke Shaadi, Events, Hotels aur Cafes ko unke apne *Custom Label Branding* ki facility bhi dete hain.</p>
+            <p>Humari modern automated plant unit (Jobner, Jaipur) mein har bottle **RO + UV + Ozonation 7-Stage Purification** se guzar kar bilkul fresh pack hoti hai. Hum na sirf pure drinking water dete hain, balki Rajasthan ke Shaadi, Events, Hotels aur Cafes ko unke apne **Custom Label Branding** ki facility bhi dete hain.</p>
         </div>
 
         <div class="comp-grid">
@@ -192,44 +195,10 @@
         </div>
     </section>
 
-    <!-- 5-Step Purification Timeline -->
-    <section class="section-padding" id="process" style="background: #f1f5f9;">
-        <h2 class="section-title">Hamari 5-Step Purification Technology</h2>
-        <p class="section-sub">Aap tak pahunchne se pehle paani in strict multi-stage purification steps se guzarta hai:</p>
-        
-        <div class="steps-wrapper">
-            <div class="step-item">
-                <div class="step-number">1</div>
-                <h4>Sand Filtration</h4>
-                <p>Mitti aur bade suspended particles ko completely remove karta hai.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">2</div>
-                <h4>Carbon Filter</h4>
-                <p>Odour, Chlorine aur bad taste ko neutralize karta hai.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">3</div>
-                <h4>RO Membrane</h4>
-                <p>Dissolved salts aur heavy metals ko purify karta hai.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">4</div>
-                <h4>UV Disinfection</h4>
-                <p>Micro-organisms aur bacteria ko 100% eliminate karta hai.</p>
-            </div>
-            <div class="step-item">
-                <div class="step-number">5</div>
-                <h4>Ozonation</h4>
-                <p>Bottle locking aur long shelf-life freshness ke liye final ozone treatment.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Order Calculator Section -->
     <section class="section-padding" id="calculator">
         <h2 class="section-title">Live Order Estimator & Bill Calculator</h2>
-        <p class="section-sub">Aapko kitne bundle chahiye select karein—live rate aur bill total turant dekhein:</p>
+        <p class="section-sub">10 Patti ke order par 1 Patti Free offer auto-calculate hoga:</p>
 
         <div class="calc-container">
             <!-- 1 Litre Item -->
@@ -237,7 +206,7 @@
                 <div class="calc-info">
                     <h4>Aquelio 1 Litre Pack</h4>
                     <p>12 Bottles per Bundle (For Daily & Retail)</p>
-                    <div class="calc-price-tag">Rate: ₹120 per Bundle</div>
+                    <div class="calc-price-tag">Rate: ₹105 per Bundle</div>
                 </div>
                 <div class="calc-controls">
                     <button class="btn-qty" onclick="adjustQty('qty-1l', -1)">-</button>
@@ -252,7 +221,7 @@
                 <div class="calc-info">
                     <h4>Aquelio 500 ml Pack</h4>
                     <p>24 Bottles per Bundle (For Dhabas, Gyms & Travel)</p>
-                    <div class="calc-price-tag">Rate: ₹140 per Bundle</div>
+                    <div class="calc-price-tag">Rate: ₹135 per Bundle</div>
                 </div>
                 <div class="calc-controls">
                     <button class="btn-qty" onclick="adjustQty('qty-500ml', -1)">-</button>
@@ -267,7 +236,7 @@
                 <div class="calc-info">
                     <h4>Aquelio 200 ml Event Pack</h4>
                     <p>48 Bottles per Bundle (Weddings & Party Special)</p>
-                    <div class="calc-price-tag">Rate: ₹160 per Bundle</div>
+                    <div class="calc-price-tag">Rate: ₹165 per Bundle</div>
                 </div>
                 <div class="calc-controls">
                     <button class="btn-qty" onclick="adjustQty('qty-200ml', -1)">-</button>
@@ -283,6 +252,7 @@
                     <span class="bill-total-title">Estimated Total Bill</span>
                     <div class="bill-total-price" id="grand-total-price">₹0</div>
                     <span class="bill-bundle-count" id="grand-bundle-count">0 Bundles Selected</span>
+                    <span class="offer-free-tag" id="offer-free-text">🎉 Offer: 0 Patti Free Added!</span>
                 </div>
                 <button class="btn-send-wa" onclick="sendWhatsAppBillOrder()">
                     <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Order Now on WhatsApp
@@ -291,49 +261,75 @@
         </div>
     </section>
 
-    <!-- FAQ Accordion Section -->
+    <!-- Updated FAQ Section -->
     <section class="section-padding" id="faq" style="background: #f8fafc;">
         <h2 class="section-title">Frequently Asked Questions (FAQs)</h2>
-        <p class="section-sub">Aapke aam sawalon ke aasan jawab:</p>
+        <p class="section-sub">Aapke aam sawalon ke saaf aur aasan jawab:</p>
 
-        <div class="faq-wrapper">
+        <div class="faq-wrapper" id="faq-container">
+            <!-- FAQ Item 1 -->
             <div class="faq-item">
                 <div class="faq-header" onclick="toggleFaq(this)">
-                    <span>Minimum order kitna hona chahiye?</span>
+                    <span>1. Delivery kitne samay mein milti hai? (Delivery Timeline)</span>
                     <i class="fa-solid fa-plus faq-icon"></i>
                 </div>
                 <div class="faq-body">
-                    Jobner aur aaspas ke ilakon mein minimum 5 se 10 bundles ki delivery aasani se ho jaati hai. Bulk orders (Shaadi ya Large Events) ke liye special wholesale discount bhi diya jaata hai.
+                    <strong>10 km ke andar Same Day Delivery</strong> di jaati hai. Baaki sabhi locations par <strong>Next Day Delivery</strong> hoti hai. Emergency ya urgent orders ke liye special fast timing service bhi available hai.
                 </div>
             </div>
 
+            <!-- FAQ Item 2 -->
             <div class="faq-item">
                 <div class="faq-header" onclick="toggleFaq(this)">
-                    <span>Custom Event Label (Shaadi/Business) kaise banwayen?</span>
+                    <span>2. Custom Label / Branding ki kya fees aur process hai?</span>
                     <i class="fa-solid fa-plus faq-icon"></i>
                 </div>
                 <div class="faq-body">
-                    Aap humare WhatsApp number par apne event ka naam, photo ya logo bhej sakte hain. Humari team 2-3 dino ke andar aapke custom label print karke bottles ready kar deti hai.
+                    Shaadi, Events, Hotels aur Cafes ke liye customized labels banye jaate hain. Customization charges aapke event type aur label structure/design complexity ke aadhar par alag se tay hote hain.
                 </div>
             </div>
 
+            <!-- FAQ Item 3 -->
             <div class="faq-item">
                 <div class="faq-header" onclick="toggleFaq(this)">
-                    <span>Delivery kin-kin ilakon mein available hai?</span>
+                    <span>3. Payment terms aur payment methods kya hain?</span>
                     <i class="fa-solid fa-plus faq-icon"></i>
                 </div>
                 <div class="faq-body">
-                    Humari main plant Unit Jobner (Jaipur) mein hai. Jobner, Phulera, Asalpur, Jaipur city aur aaspas ke sabhi major highways/gardens mein delivery available hai.
+                    Order confirmation ke liye <strong>50% Advance Payment</strong> zaroori hai. Uske baad baaki payment ke liye aap UPI, Cash, Bank Transfer ya koi bhi preferred online/offline payment method use kar sakte hain.
                 </div>
             </div>
 
+            <!-- FAQ Item 4 -->
             <div class="faq-item">
                 <div class="faq-header" onclick="toggleFaq(this)">
-                    <span>Kya Aquelio water BIS / FSSAI Quality Approved hai?</span>
+                    <span>4. Distributorship / Wholesale Agency lene ka kya process hai?</span>
                     <i class="fa-solid fa-plus faq-icon"></i>
                 </div>
                 <div class="faq-body">
-                    Ji haan! Aquelio Packaged Drinking Water poori tarah strict Quality Standards, FSSAI hygiene protocols aur multi-stage lab tested purification process ke tahat तैयार kiya jata hai.
+                    Hum naye traders aur distributors ko <strong>Special Wholesale Discounts</strong> aur high profit margins offer karte hain. Agency ki poori jaankari aur requirements ke liye humare team contact number (<strong>+91 9351156730</strong>) par direct call ya WhatsApp karein.
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>5. Damage ya Quality issue hone par Replacement Policy kya hai?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                </div>
+                <div class="faq-body">
+                    Transit mein agar koi patti ya bottle damage hoti hai, toh hum <strong>100% Guaranteed Replacement</strong> dete hain. Saath hi customer satisfaction ke liye extra minimum discount/benefit bhi diya jaata hai.
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>6. 10 Patti par 1 Patti Free offer kaise kaam karta hai?</span>
+                    <i class="fa-solid fa-plus faq-icon"></i>
+                </div>
+                <div class="faq-body">
+                    Aap jaise hi 10 Patti (Bundles) ka order place karte hain, har 10 Patti par 1 Patti bilkul FREE auto-add ho jaati hai (Jaise 20 Patti par 2 Free, 30 Patti par 3 Free).
                 </div>
             </div>
         </div>
@@ -350,23 +346,11 @@
             </div>
 
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <li><a href="#story" style="color:#94a3b8; text-decoration:none;">Our Story & Advantage</a></li>
-                <li><a href="#process" style="color:#94a3b8; text-decoration:none;">5-Step Purification</a></li>
-                <li><a href="#calculator" style="color:#94a3b8; text-decoration:none;">Bill Calculator</a></li>
-                <li><a href="#faq" style="color:#94a3b8; text-decoration:none;">FAQs & Support</a></li>
-            </div>
-
-            <div class="footer-col">
                 <h3>Business & GST Info</h3>
                 <p><strong>Firm Name:</strong> MA Enterprises</p>
                 <p><strong>GSTIN:</strong> 08CRZPM7630J1ZW</p>
                 <p><strong>Supply Types:</strong> Retail, Bulk Supply, Event Custom Bottles.</p>
             </div>
-        </div>
-
-        <div class="legal-notice">
-            <strong>Legal Disclaimer & Quality Compliance:</strong> Aquelio™ is a quality product brand owned and operated by MA Enterprises. All rights reserved. Water is purified using multi-stage RO, UV, and Ozonation. For direct trade inquiries or agency franchise, please call +91 9351156730.
         </div>
 
         <div class="footer-bottom">
@@ -381,10 +365,11 @@
 
     <!-- JavaScript Functions -->
     <script>
+        // Updated Rates based on Campa competitive positioning
         const RATES = {
-            'qty-1l': 120,
-            'qty-500ml': 140,
-            'qty-200ml': 160
+            'qty-1l': 105,
+            'qty-500ml': 135,
+            'qty-200ml': 165
         };
 
         function adjustQty(id, change) {
@@ -413,8 +398,19 @@
             let grandTotal = sub1l + sub500ml + sub200ml;
             let totalBundles = q1l + q500ml + q200ml;
 
+            // 10 Patti + 1 Free Calculation
+            let freeBundles = Math.floor(totalBundles / 10);
+
             document.getElementById('grand-total-price').innerText = '₹' + grandTotal;
             document.getElementById('grand-bundle-count').innerText = totalBundles + ' Bundles Selected';
+
+            let offerText = document.getElementById('offer-free-text');
+            if (freeBundles > 0) {
+                offerText.innerText = `🎉 Offer Applied: ${freeBundles} Patti FREE Extra!`;
+                offerText.style.display = 'block';
+            } else {
+                offerText.style.display = 'none';
+            }
         }
 
         function sendWhatsAppBillOrder() {
@@ -429,18 +425,20 @@
                 return;
             }
 
+            let freeBundles = Math.floor(totalBundles / 10);
             let grandTotal = (q1l * RATES['qty-1l']) + (q500ml * RATES['qty-500ml']) + (q200ml * RATES['qty-200ml']);
 
-            let msg = *NEW AQUELIO WATER ORDER*%0A%0A +
-                      📦 *Order Summary:*%0A +
-                      (q1l > 0 ? - 1 Litre (12 Btls): ${q1l} Bundles (₹${q1l * RATES['qty-1l']})%0A : '') +
-                      (q500ml > 0 ? - 500 ml (24 Btls): ${q500ml} Bundles (₹${q500ml * RATES['qty-500ml']})%0A : '') +
-                      (q200ml > 0 ? - 200 ml Event (48 Btls): ${q200ml} Bundles (₹${q200ml * RATES['qty-200ml']})%0A : '') +
-                      %0A📊 *Total Bundles:* ${totalBundles} +
-                      %0A💰 *Estimated Bill Total:* ₹${grandTotal} +
-                      %0A%0AKripya delivery confirmation aur payment details bhej dein.;
+            let msg = `*NEW AQUELIO WATER ORDER*%0A%0A` +
+                      `📦 *Order Summary:*%0A` +
+                      (q1l > 0 ? `- 1 Litre (12 Btls): ${q1l} Bundles (₹${q1l * RATES['qty-1l']})%0A` : '') +
+                      (q500ml > 0 ? `- 500 ml (24 Btls): ${q500ml} Bundles (₹${q500ml * RATES['qty-500ml']})%0A` : '') +
+                      (q200ml > 0 ? `- 200 ml Event (48 Btls): ${q200ml} Bundles (₹${q200ml * RATES['qty-200ml']})%0A` : '') +
+                      `%0A📊 *Total Bundles:* ${totalBundles}` +
+                      (freeBundles > 0 ? `%0A🎁 *Free Offer Patti:* +${freeBundles} FREE Patti%0A` : '%0A') +
+                      `💰 *Estimated Bill Total:* ₹${grandTotal}` +
+                      `%0A%0AKripya delivery confirmation aur payment details bhej dein.`;
 
-            window.open(https://wa.me/919351156730?text=${msg}, '_blank');
+            window.open(`https://wa.me/919351156730?text=${msg}`, '_blank');
         }
 
         function toggleFaq(headerElement) {
